@@ -8,19 +8,16 @@ namespace _1688openapisdk
     {
         static void Main(string[] args)
         {
-            string appKey = "338249";
-            string appSecret = "JpmpVnOvJb";
-            string loginUrl = "https://gw.open.1688.com/openapi/param2/1/system.oauth2/authn/" + appKey;
-            string userName = "testfree66";
-            string password = "1111112";
+
+            string loginUrl = "https://gw.open.1688.com/openapi/param2/1/system.oauth2/authn/" + Config.appKey;
             Encoding encoding = Encoding.GetEncoding("gb2312");
 
             Dictionary<string, string> parameters = new Dictionary<string, string>();
             parameters.Add("loginIdType", "LOGIN_ID");
             parameters.Add("needRefreshToken", "false");
-            parameters.Add("account", userName);
-            parameters.Add("password", password);
-            string _aop_signature = Sign.sign("param2/1/system.oauth2/authn/338249",parameters,appSecret);
+            parameters.Add("account", Config.userName);
+            parameters.Add("password", Config.password);
+            string _aop_signature = Sign.sign("param2/1/system.oauth2/authn/338249", parameters, Config.appSecret);
             parameters.Add("_aop_signature",_aop_signature);
 
             /** 
@@ -35,7 +32,7 @@ namespace _1688openapisdk
 
             //获取单个会员数据
             /**
-            string testApiUrl = "http://gw.open.1688.com/openapi/param2/1/cn.alibaba.open/member.get/" + appKey;
+            string testApiUrl = "http://gw.open.1688.com/openapi/param2/1/cn.alibaba.open/member.get/" + Config.appKey;
 
             Dictionary<string, string> apiparameters = new Dictionary<string, string>();
             apiparameters.Add("memberId", "testfree");
@@ -44,7 +41,7 @@ namespace _1688openapisdk
             TimeSpan t = DateTime.Now - startTime;
             apiparameters.Add("_aop_timestamp", ((long)t.TotalMilliseconds).ToString());//((long)t.TotalMilliseconds - 846).ToString()
             apiparameters.Add("access_token", "736DA4F7B32364D6EBDED1CE663D546BE6DF1A54");
-            string new_aop_signature = Sign.sign("param2/1/cn.alibaba.open/member.get/338249", apiparameters, appSecret);
+            string new_aop_signature = Sign.sign("param2/1/cn.alibaba.open/member.get/338249", apiparameters, Config.appSecret);
             apiparameters.Add("_aop_signature", new_aop_signature);
             System.Net.HttpWebResponse testresponse = HttpWebResponseUtility.CreatePostHttpResponse(testApiUrl, apiparameters, null, null, encoding, null);
             using (System.IO.StreamReader reader = new System.IO.StreamReader(testresponse.GetResponseStream(), System.Text.Encoding.GetEncoding("utf-8")))
@@ -55,7 +52,7 @@ namespace _1688openapisdk
             Console.WriteLine("");
             **/
 
-            string testApiUrl = "http://gw.open.1688.com/openapi/param2/1/cn.alibaba.open/offer.getPublishOfferList/" + appKey;
+            string testApiUrl = "http://gw.open.1688.com/openapi/param2/1/cn.alibaba.open/offer.getPublishOfferList/" + Config.appKey;
             Dictionary<string, string> apiparameters = new Dictionary<string, string>();
             System.DateTime startTime = TimeZone.CurrentTimeZone.ToLocalTime(new System.DateTime(1970, 1, 1));
             TimeSpan t = DateTime.Now - startTime;
@@ -63,7 +60,7 @@ namespace _1688openapisdk
             apiparameters.Add("access_token", "98ff5cfe-a452-42d3-993a-d25bdce79d66");
             apiparameters.Add("type", "SALE");
             apiparameters.Add("returnFields", "offerId,subject");
-            string new_aop_signature = Sign.sign("param2/1/cn.alibaba.open/offer.getPublishOfferList/338249", apiparameters, appSecret);
+            string new_aop_signature = Sign.sign("param2/1/cn.alibaba.open/offer.getPublishOfferList/338249", apiparameters, Config.appSecret);
             apiparameters.Add("_aop_signature", new_aop_signature);
 
             
