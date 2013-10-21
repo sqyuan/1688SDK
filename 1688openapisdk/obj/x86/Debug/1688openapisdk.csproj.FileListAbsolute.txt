@@ -1,0 +1,6 @@
+c:\users\weijian.zhongwj\documents\visual studio 2010\Projects\1688openapisdk\1688openapisdk\bin\Debug\1688openapisdk.exe.config
+c:\users\weijian.zhongwj\documents\visual studio 2010\Projects\1688openapisdk\1688openapisdk\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\weijian.zhongwj\documents\visual studio 2010\Projects\1688openapisdk\1688openapisdk\bin\Debug\1688openapisdk.exe
+c:\users\weijian.zhongwj\documents\visual studio 2010\Projects\1688openapisdk\1688openapisdk\bin\Debug\1688openapisdk.pdb
+c:\users\weijian.zhongwj\documents\visual studio 2010\Projects\1688openapisdk\1688openapisdk\obj\x86\Debug\1688openapisdk.exe
+c:\users\weijian.zhongwj\documents\visual studio 2010\Projects\1688openapisdk\1688openapisdk\obj\x86\Debug\1688openapisdk.pdb
