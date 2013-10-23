@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Jayrock.Json.Conversion;
+using Jayrock.Json;
 
 namespace _1688openapisdk
 {
     class Program
     {
-        static void Main(string[] args)
+        static void testMain(string[] args)
+        //static void Main(string[] args)
         {
 
             string loginUrl = "https://gw.open.1688.com/openapi/param2/1/system.oauth2/authn/" + Config.appKey;
@@ -20,15 +23,17 @@ namespace _1688openapisdk
             string _aop_signature = Sign.sign("param2/1/system.oauth2/authn/338249", parameters, Config.appSecret);
             parameters.Add("_aop_signature",_aop_signature);
 
-            /** 
-            System.Net.HttpWebResponse response = HttpWebResponseUtility.CreatePostHttpResponse(loginUrl, parameters, null, null, encoding, null);
+            String accessTokenResult; 
+            System.Net.HttpWebResponse response = WebUtils.CreatePostHttpResponse(loginUrl, parameters, null, null, encoding, null);
             using (System.IO.StreamReader reader = new System.IO.StreamReader(response.GetResponseStream(), System.Text.Encoding.GetEncoding("gb2312")))
             {
-                Console.WriteLine(reader.ReadToEnd());
+                accessTokenResult = reader.ReadToEnd();
                 //"{\"accessToken\":\"a8f10cd3-3a0c-4d9c-b4ee-2a298630c793\",\"accessTokenTimeout\":36000,\"aliId\":998987466,\"memberId\":\"testfree\",\"resourceOwnerId\":\"testfree66\",\"uid\":\"14346967\"}"
-            }*/
+            }
 
-            Console.WriteLine("");
+            JsonObject jo = JsonConvert.Import(accessTokenResult) as JsonObject;
+            Console.WriteLine("config accessToken: " + jo["accessToken"]);
+            Console.WriteLine("config memberId: " + jo["memberId"]);
 
             //获取单个会员数据
             /**
@@ -57,14 +62,14 @@ namespace _1688openapisdk
             System.DateTime startTime = TimeZone.CurrentTimeZone.ToLocalTime(new System.DateTime(1970, 1, 1));
             TimeSpan t = DateTime.Now - startTime;
             //apiparameters.Add("_aop_timestamp", ((long)t.TotalMilliseconds).ToString());
-            apiparameters.Add("access_token", "98ff5cfe-a452-42d3-993a-d25bdce79d66");
+            apiparameters.Add("access_token", jo["accessToken"].ToString());
             apiparameters.Add("type", "SALE");
             apiparameters.Add("returnFields", "offerId,subject");
             string new_aop_signature = Sign.sign("param2/1/cn.alibaba.open/offer.getPublishOfferList/338249", apiparameters, Config.appSecret);
             apiparameters.Add("_aop_signature", new_aop_signature);
 
             
-            System.Net.HttpWebResponse testresponse = HttpWebResponseUtility.CreatePostHttpResponse(testApiUrl, apiparameters, null, null, encoding, null);
+            System.Net.HttpWebResponse testresponse = WebUtils.CreatePostHttpResponse(testApiUrl, apiparameters, null, null, encoding, null);
             using (System.IO.StreamReader reader = new System.IO.StreamReader(testresponse.GetResponseStream(), System.Text.Encoding.GetEncoding("utf-8")))
             {
                 Console.WriteLine(reader.ReadToEnd());

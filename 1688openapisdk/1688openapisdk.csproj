@@ -35,6 +35,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Jayrock">
+      <HintPath>E:\tmp\bin\net-2.0\release\Jayrock.dll</HintPath>
+    </Reference>
+    <Reference Include="Jayrock.Json">
+      <HintPath>E:\tmp\bin\net-2.0\release\Jayrock.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,14 +50,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HttpWebResponseUtility.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="AliDictionary.cs" />
+    <Compile Include="AliException.cs" />
+    <Compile Include="AliResponse.cs" />
+    <Compile Include="example\AccessTokenExample.cs" />
+    <Compile Include="example\Config.cs" />
+    <Compile Include="DefaultAliClient.cs" />
+    <Compile Include="DefaultAliLogger.cs" />
+    <Compile Include="domain\MemberInfo.cs" />
+    <Compile Include="request\AccessTokenRequest.cs" />
+    <Compile Include="response\AccessTokenResponse.cs" />
+    <Compile Include="response\MemberInfoResponse.cs" />
+    <Compile Include="util\WebUtils.cs" />
+    <Compile Include="IAliClient.cs" />
+    <Compile Include="IAliLogger.cs" />
+    <Compile Include="IAliRequest.cs" />
+    <Compile Include="example\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sign.cs" />
+    <Compile Include="util\Sign.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
