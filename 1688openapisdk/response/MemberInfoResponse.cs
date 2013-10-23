@@ -5,8 +5,8 @@ using _1688openapisdk.domain;
 
 namespace _1688openapisdk.response
 {
-    class MemberInfoResponse:AliResponse
+    public class MemberInfoResponse:AliResponse
     {
-        public MemberInfo memberInfo { get; set; }
+        public MemberInfo toReturn { get; set; }
     }
 }

@@ -27,6 +27,11 @@ namespace _1688openapisdk
         /// 提前验证参数。
         /// </summary>
         void Validate();
+
+        /// <summary>
+        /// 获取返回结果类型
+        /// </summary>
+        object GetReturnType();
     }
 
 }

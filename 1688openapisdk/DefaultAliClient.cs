@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Text;
 using Jayrock.Json.Conversion;
 using _1688openapisdk.response;
+using Jayrock.Json;
+using System.IO;
+using System.Collections;
 
 namespace _1688openapisdk
 {
@@ -16,6 +19,9 @@ namespace _1688openapisdk
             public const string SIGN = "_aop_signature";
             public const string FORMAT_XML = "xml";
             public const string FORMAT_JSON = "json";
+            public const string ACCESS_TOKEN = "access_token";
+
+            public const string ACCESS_TOKEN_METHOD = "param2/1/system.oauth2/authn/";
            
 
             private string serverUrl;
@@ -28,7 +34,7 @@ namespace _1688openapisdk
             private IAliLogger aliLogger;
             private bool disableParser = false; // 禁用响应结果解释
             private bool disableTrace = false; // 禁用日志调试功能
-            private Encoding encoding = Encoding.GetEncoding("gb2312");
+            private Encoding encoding = Encoding.GetEncoding("utf-8");
             private IDictionary<string, string> systemParameters; // 设置所有请求共享的系统级参数
 
             #region DefaultAliClient Constructors
@@ -159,26 +165,31 @@ namespace _1688openapisdk
                     }
                     else
                     {
-                        /**
-                        //把实体转成JSON:
-                        User user = new User();
-                        user.Id = 1;
-                        user.Name = "你";
-                        user.Money = 2.3;
-                        user.Time = DateTime.Now;
-                        user.Str = new string[] { "1", "2", "3" };
-                        Jayrock.Json.JsonTextWriter writer = new Jayrock.Json.JsonTextWriter();
-                        Jayrock.Json.Conversion.JsonConvert.Export(user, writer);
-                        string str = writer.ToString();
-                    //str等于{"id":1,"name":"你","time":"2009-04-14T14:29:29.4375000+08:00","money":2.3,"str":["1","2","3"]}
-
-
-
-JSON转成实体:
-                        string str = "{\"id\":1,\"name\":\"你\",\"time\":\"2009-04-13T22:21:11.6562500+08:00\",\"money\":2.3,\"str\":[\"1\",\"2\",\"3\"]}";
-                        User user = (User)Jayrock.Json.Conversion.JsonConvert.Import(typeof(User), str);
-                        **/
-                        rsp = (T)Jayrock.Json.Conversion.JsonConvert.Import(typeof(T), body);
+                        if (request.GetApiName().Equals(ACCESS_TOKEN_METHOD))
+                        {
+                            rsp = (T)Jayrock.Json.Conversion.JsonConvert.Import(typeof(T), body);
+                        }
+                        else
+                        {
+                            JsonObject jsonObj = new JsonObject();
+                            jsonObj.Import(new JsonTextReader(new StringReader(body)));
+                            JsonObject responseObj = jsonObj["result"] as JsonObject;
+                            bool code = (bool)responseObj["success"];
+                            if (!code)
+                            {
+                                return createErrorResponse<T>(jsonObj["code"].ToString(), jsonObj["message"].ToString());
+                            }
+                            JsonArray toReturn = responseObj["toReturn"] as JsonArray;
+                            if(request.GetReturnType() is IList){
+                                rsp = (T)Jayrock.Json.Conversion.JsonConvert.Import(typeof(T), body);
+                            }
+                            else
+                            {
+                                String newBody = "{toReturn:" + toReturn[0].ToString() + "}";
+                                rsp = (T)Jayrock.Json.Conversion.JsonConvert.Import(typeof(T), newBody);
+                            }
+                        }
+                       
                     }
                 }
 

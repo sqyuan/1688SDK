@@ -33,5 +33,10 @@ namespace _1688openapisdk.request
                 throw new AliException("account and password must not be null");
             }
         }
+
+        public object GetReturnType()
+        {
+            return typeof(AccessTokenResponse);
+        }
     }
 }

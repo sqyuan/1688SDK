@@ -19,6 +19,17 @@ namespace _1688openapisdk.example
             Jayrock.Json.Conversion.JsonConvert.Export(accessTokenResponse, writer);
             string str = writer.ToString();
             Console.WriteLine(str);
+
+            MemberInfoRequest memberInfoRequest = new MemberInfoRequest();
+            memberInfoRequest.access_token = accessTokenResponse.accessToken;
+            memberInfoRequest.memberId = accessTokenResponse.memberId;
+            MemberInfoResponse memberInfoResponse = defaultAliClient.Execute(memberInfoRequest);
+            Console.WriteLine(memberInfoResponse.toReturn.isTP);
+            Jayrock.Json.JsonTextWriter writer1 = new Jayrock.Json.JsonTextWriter();
+            Jayrock.Json.Conversion.JsonConvert.Export(memberInfoResponse, writer1);
+            string str1 = writer1.ToString();
+            Console.WriteLine(str1);
+
         }
     }
 }

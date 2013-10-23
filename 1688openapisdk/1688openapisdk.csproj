@@ -53,12 +53,14 @@
     <Compile Include="AliDictionary.cs" />
     <Compile Include="AliException.cs" />
     <Compile Include="AliResponse.cs" />
+    <Compile Include="domain\AddressLocation.cs" />
     <Compile Include="example\AccessTokenExample.cs" />
     <Compile Include="example\Config.cs" />
     <Compile Include="DefaultAliClient.cs" />
     <Compile Include="DefaultAliLogger.cs" />
     <Compile Include="domain\MemberInfo.cs" />
     <Compile Include="request\AccessTokenRequest.cs" />
+    <Compile Include="request\MemberInfoRequest.cs" />
     <Compile Include="response\AccessTokenResponse.cs" />
     <Compile Include="response\MemberInfoResponse.cs" />
     <Compile Include="util\WebUtils.cs" />

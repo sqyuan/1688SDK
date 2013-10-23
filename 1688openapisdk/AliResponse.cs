@@ -21,6 +21,11 @@ namespace _1688openapisdk
         /// </summary>
         public string exception { get; set; }
 
+        /// <summary>
+        /// 是否成功
+        /// </summary>
+        public bool success { get; set; }
+
 
         /// <summary>
         /// 响应结果是否错误
