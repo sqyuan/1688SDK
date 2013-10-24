@@ -175,19 +175,22 @@ namespace _1688openapisdk
                             jsonObj.Import(new JsonTextReader(new StringReader(body)));
                             JsonObject responseObj = jsonObj["result"] as JsonObject;
                             bool code = (bool)responseObj["success"];
-                            if (!code)
+                            Int32 total = ((JsonNumber)responseObj["total"]).ToInt32();
+                            if (!code && total == 0)
                             {
                                 return createErrorResponse<T>(jsonObj["code"].ToString(), jsonObj["message"].ToString());
                             }
                             JsonArray toReturn = responseObj["toReturn"] as JsonArray;
-                            if(request.GetReturnType() is IList){
-                                rsp = (T)Jayrock.Json.Conversion.JsonConvert.Import(typeof(T), body);
+                            if (((Type)request.GetReturnType()).FullName.StartsWith("System.Collections.Generic.List") || request.GetReturnType().GetType().IsArray)
+                            {
+                                rsp = (T)Jayrock.Json.Conversion.JsonConvert.Import(typeof(T), responseObj.ToString());
                             }
                             else
                             {
                                 String newBody = "{toReturn:" + toReturn[0].ToString() + "}";
                                 rsp = (T)Jayrock.Json.Conversion.JsonConvert.Import(typeof(T), newBody);
                             }
+                            rsp.total = total;
                         }
                        
                     }

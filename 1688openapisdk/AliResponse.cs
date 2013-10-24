@@ -26,6 +26,11 @@ namespace _1688openapisdk
         /// </summary>
         public bool success { get; set; }
 
+        /// <summary>
+        /// 返回总数
+        /// </summary>
+        public int total { get; set; }
+
 
         /// <summary>
         /// 响应结果是否错误

@@ -8,9 +8,14 @@ namespace _1688openapisdk.request
 {
     class MemberInfoRequest:IAliRequest<MemberInfoResponse>
     {
-
+        /// <summary>
+        /// 会员ID
+        /// </summary>
         public string memberId { get; set; }
 
+        /// <summary>
+        /// 自定义返回字段。在memberInfo结构中选择需要返回的字段名称，半角逗号分隔companyName,sellerName,department
+        /// </summary>
         public string[] returnFields { get; set; }
 
         public string access_token { get;set;}
