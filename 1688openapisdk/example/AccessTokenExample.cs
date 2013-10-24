@@ -46,6 +46,15 @@ namespace _1688openapisdk.example
             string str2 = writer2.ToString();
             Console.WriteLine(str2);
 
+            ///获取阿里巴巴中国网站会员所有的产品信息列表 offer.getAllOfferList -- version: 1 示例
+            AllOfferListRequest allOfferListRequest = new AllOfferListRequest();
+            allOfferListRequest.access_token = accessTokenResponse.accessToken;
+            allOfferListRequest.type = "SALE";
+            allOfferListRequest.returnFields = new string[] { "offerId", "subject", "productFeatureList", "details", "memberId", "postCategryId", "saledCount", "amountOnSale", "priceRanges", "unit", "gmtModified", "imageList" };
+            PublishOfferListResponse publishOfferListResponse1 = defaultAliClient.Execute(allOfferListRequest);
+            Console.WriteLine(publishOfferListResponse1.toReturn);
+
+
             ///查询单个产品信息 offer.get -- version: 1
             OfferQueryRequest offerQueryRequest = new OfferQueryRequest();
             offerQueryRequest.access_token = accessTokenResponse.accessToken;
@@ -53,6 +62,50 @@ namespace _1688openapisdk.example
             offerQueryRequest.returnFields = new string[] { "offerId", "subject", "productFeatureList", "details", "memberId", "postCategryId", "saledCount", "amountOnSale", "priceRanges", "unit", "gmtModified", "imageList" };
             OfferResponse offerResponse = defaultAliClient.Execute(offerQueryRequest);
             Console.WriteLine(offerResponse.toReturn.ToString());
+
+            ///获取提供该服务的物流公司列表 e56.logistics.companies.get -- version: 1
+            LogisticsCompaniesGetRequest logisticsCompaniesGetRequest = new LogisticsCompaniesGetRequest();
+            logisticsCompaniesGetRequest.access_token = accessTokenResponse.accessToken;
+            logisticsCompaniesGetRequest.memberId = "testfree";
+            logisticsCompaniesGetRequest.serviceType = "ZX";
+            LogisticsCompaniesGetResponse logisticsCompaniesGetResponse = defaultAliClient.Execute(logisticsCompaniesGetRequest);
+            Console.WriteLine(logisticsCompaniesGetResponse);
+
+            ///用户调用该接口可实现自己联系发货（线下物流），使用该接口发货，交易订单状态会直接变成卖家已发货。不支持货到付款、在线下单类型的订单。e56.logistics.offline.send -- version: 1
+            LogisticsOfflineSendRequest logisticsOfflineSendRequest = new LogisticsOfflineSendRequest();
+            logisticsOfflineSendRequest.memberId = "testfree";
+            logisticsOfflineSendRequest.orderId = "404252368801798";
+            logisticsOfflineSendRequest.orderEntryIds = "404252368801798";
+            logisticsOfflineSendRequest.tradeSourceType = "cbu-trade";
+            logisticsOfflineSendRequest.logisticsCompanyId = "3";
+            logisticsOfflineSendRequest.selfCompanyName = "中通速递";
+            logisticsOfflineSendRequest.logisticsBillNo = "768070181853";
+            logisticsOfflineSendRequest.gmtSystemSend = "2013-10-23 11:21:35";
+            logisticsOfflineSendRequest.gmtLogisticsCompanySend = "2013-10-23 11:21:35";
+            logisticsOfflineSendRequest.access_token = accessTokenResponse.accessToken;
+            //LogisticsOfflineSendResponse logisticsOfflineSendResponse = defaultAliClient.Execute(logisticsOfflineSendRequest);
+            //Console.WriteLine(logisticsOfflineSendResponse);
+
+
+            ///用户根据交易号查询物流流转信息，如2010-8-10 15：23：00到达杭州集散地。 此接口的返回信息都由物流公司提供。e56.logistics.trace.get -- version: 1
+            LogisticsOrderGetRequest logisticsOrderGetRequest = new LogisticsOrderGetRequest();
+            logisticsOrderGetRequest.memberId = "testfree";
+            logisticsOrderGetRequest.orderId = "404252368801798";
+            logisticsOrderGetRequest.tradeSourceType = "cbu-trade";
+            logisticsOrderGetRequest.fields = "company.name,sender,receiver,sendgood";
+            logisticsOrderGetRequest.access_token = accessTokenResponse.accessToken;
+            LogisticsOrderGetResponse logisticsOrderGetResponse = defaultAliClient.Execute(logisticsOrderGetRequest);
+            Console.WriteLine(logisticsOrderGetResponse);
+
+            ///根据交易订单ID, 获取该订单下的物流单列表 e56.logistics.orders.get -- version: 1
+            LogisticsTraceGetRequest logisticsTraceGetRequest = new LogisticsTraceGetRequest();
+            logisticsTraceGetRequest.memberId = "testfree";
+            logisticsTraceGetRequest.orderId = "404252368801798";
+            logisticsTraceGetRequest.tradeSourceType = "cbu-trade";
+            logisticsTraceGetRequest.access_token = accessTokenResponse.accessToken;
+            LogisticsTraceGetResponse logisticsTraceGetResponse = defaultAliClient.Execute(logisticsTraceGetRequest);
+            Console.WriteLine(logisticsTraceGetResponse);
+
 
         }
     }

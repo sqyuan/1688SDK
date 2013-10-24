@@ -17,5 +17,6 @@ namespace _1688openapisdk.response
         public string resourceOwnerId { get; set; }
 
         public string uid { get; set; }
+
     }
 }

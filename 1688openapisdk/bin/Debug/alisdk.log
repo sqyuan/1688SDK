@@ -473,3 +473,12 @@
    在 Jayrock.Json.Conversion.JsonConvert.Import(Type type, String text) 位置 c:\builds\Jayrock\src\Jayrock.Json\Json\Conversion\JsonConvert.cs:行号 106
    在 _1688openapisdk.DefaultAliClient.DoExecute[T](IAliRequest`1 request, String accessToken, DateTime timestamp) 位置 C:\Users\weijian.zhongwj\documents\visual studio 2010\Projects\1688openapisdk\1688openapisdk\DefaultAliClient.cs:行号 191
    在 _1688openapisdk.DefaultAliClient.Execute[T](IAliRequest`1 request, String accessToken, DateTime timestamp) 位置 C:\Users\weijian.zhongwj\documents\visual studio 2010\Projects\1688openapisdk\1688openapisdk\DefaultAliClient.cs:行号 107
+2013-10-24 14:54:26 ERROR: https://gw.open.1688.com/openapi/
+   在 _1688openapisdk.DefaultAliClient.DoExecute[T](IAliRequest`1 request, String accessToken, DateTime timestamp) 位置 C:\Users\weijian.zhongwj\documents\visual studio 2010\Projects\1688openapisdk\1688openapisdk\DefaultAliClient.cs:行号 177
+   在 _1688openapisdk.DefaultAliClient.Execute[T](IAliRequest`1 request, String accessToken, DateTime timestamp) 位置 C:\Users\weijian.zhongwj\documents\visual studio 2010\Projects\1688openapisdk\1688openapisdk\DefaultAliClient.cs:行号 107
+2013-10-24 14:55:40 ERROR: https://gw.open.1688.com/openapi/
+   在 _1688openapisdk.DefaultAliClient.DoExecute[T](IAliRequest`1 request, String accessToken, DateTime timestamp) 位置 C:\Users\weijian.zhongwj\documents\visual studio 2010\Projects\1688openapisdk\1688openapisdk\DefaultAliClient.cs:行号 177
+   在 _1688openapisdk.DefaultAliClient.Execute[T](IAliRequest`1 request, String accessToken, DateTime timestamp) 位置 C:\Users\weijian.zhongwj\documents\visual studio 2010\Projects\1688openapisdk\1688openapisdk\DefaultAliClient.cs:行号 107
+2013-10-24 14:58:44 ERROR: https://gw.open.1688.com/openapi/
+   在 _1688openapisdk.DefaultAliClient.DoExecute[T](IAliRequest`1 request, String accessToken, DateTime timestamp) 位置 C:\Users\weijian.zhongwj\documents\visual studio 2010\Projects\1688openapisdk\1688openapisdk\DefaultAliClient.cs:行号 177
+   在 _1688openapisdk.DefaultAliClient.Execute[T](IAliRequest`1 request, String accessToken, DateTime timestamp) 位置 C:\Users\weijian.zhongwj\documents\visual studio 2010\Projects\1688openapisdk\1688openapisdk\DefaultAliClient.cs:行号 107

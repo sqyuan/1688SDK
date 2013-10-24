@@ -31,6 +31,10 @@ namespace _1688openapisdk
         /// </summary>
         public int total { get; set; }
 
+        /// <summary>
+        /// 序列化
+        /// </summary>
+        public void seriable(string body) { }
 
         /// <summary>
         /// 响应结果是否错误

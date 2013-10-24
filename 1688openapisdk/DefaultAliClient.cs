@@ -174,6 +174,11 @@ namespace _1688openapisdk
                             JsonObject jsonObj = new JsonObject();
                             jsonObj.Import(new JsonTextReader(new StringReader(body)));
                             JsonObject responseObj = jsonObj["result"] as JsonObject;
+                            if (responseObj == null)
+                            {
+                                rsp = (T)Jayrock.Json.Conversion.JsonConvert.Import(typeof(T), body);
+                                return rsp;
+                            }
                             bool code = (bool)responseObj["success"];
                             Int32 total = ((JsonNumber)responseObj["total"]).ToInt32();
                             if (!code && total == 0)
