@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Text;
 using _1688openapisdk.request;
 using _1688openapisdk.response;
+using _1688openapisdk.request.order;
+using _1688openapisdk.response.order;
 
 namespace _1688openapisdk.example
 {
@@ -105,6 +107,25 @@ namespace _1688openapisdk.example
             logisticsTraceGetRequest.access_token = accessTokenResponse.accessToken;
             LogisticsTraceGetResponse logisticsTraceGetResponse = defaultAliClient.Execute(logisticsTraceGetRequest);
             Console.WriteLine(logisticsTraceGetResponse);
+
+
+            ///本接口查询当前会话会员的交易订单列表
+            TradeOrderListGetRequest tradeOrderListGetRequest = new TradeOrderListGetRequest();
+            tradeOrderListGetRequest.access_token = accessTokenResponse.accessToken;
+            tradeOrderListGetRequest.sellerMemberId = "testfree";
+            tradeOrderListGetRequest.pageSize = 20;
+            tradeOrderListGetRequest.pageNO = 1;
+            TradeOrderListGetResponse tradeOrderListGetResponse = defaultAliClient.Execute(tradeOrderListGetRequest);
+            Console.WriteLine(tradeOrderListGetResponse);
+
+
+            ///本接口查询当前会话会员的交易订单详情
+            TradeOrderDetailGetRequest tradeOrderDetailGetRequest = new TradeOrderDetailGetRequest();
+            tradeOrderDetailGetRequest.access_token = accessTokenResponse.accessToken;
+            tradeOrderDetailGetRequest.orderId = 404252368801798;
+            TradeOrderDetailGetResponse tradeOrderDetailGetResponse = defaultAliClient.Execute(tradeOrderDetailGetRequest);
+            Console.WriteLine(tradeOrderDetailGetResponse);
+
 
 
         }

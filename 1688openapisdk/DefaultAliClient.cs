@@ -195,6 +195,7 @@ namespace _1688openapisdk
                                 String newBody = "{toReturn:" + toReturn[0].ToString() + "}";
                                 rsp = (T)Jayrock.Json.Conversion.JsonConvert.Import(typeof(T), newBody);
                             }
+                            rsp.success = code;
                             rsp.total = total;
                         }
                        
