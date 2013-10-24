@@ -75,7 +75,7 @@ namespace _1688openapisdk.domain
         /// <summary>
         /// 商品图片列表
         /// </summary>
-        public OfferImageInfo[] offerImageInfo { get; set; }
+        public OfferImageInfo[] imageList { get; set; }
 
         /// <summary>
         /// 商品属性信息

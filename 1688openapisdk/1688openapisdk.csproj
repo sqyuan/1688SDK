@@ -64,10 +64,13 @@
     <Compile Include="domain\MemberInfo.cs" />
     <Compile Include="domain\OfferDetailInfo.cs" />
     <Compile Include="request\AccessTokenRequest.cs" />
+    <Compile Include="request\AllOfferListRequest.cs" />
     <Compile Include="request\MemberInfoRequest.cs" />
+    <Compile Include="request\OfferQueryRequest.cs" />
     <Compile Include="request\PublishOfferListRequest.cs" />
     <Compile Include="response\AccessTokenResponse.cs" />
     <Compile Include="response\MemberInfoResponse.cs" />
+    <Compile Include="response\OfferResponse.cs" />
     <Compile Include="response\PublishOfferListResponse.cs" />
     <Compile Include="util\WebUtils.cs" />
     <Compile Include="IAliClient.cs" />

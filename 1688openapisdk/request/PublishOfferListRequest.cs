@@ -7,7 +7,7 @@ using _1688openapisdk.domain;
 
 namespace _1688openapisdk.request
 {
-    class PublishOfferListRequest : IAliRequest<PublishOfferListResponse>
+    public class PublishOfferListRequest : IAliRequest<PublishOfferListResponse>
     {
 
         /// <summary>

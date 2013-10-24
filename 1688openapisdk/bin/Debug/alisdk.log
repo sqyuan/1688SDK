@@ -431,3 +431,45 @@
    在 Jayrock.Json.Conversion.JsonConvert.Import(Type type, String text) 位置 c:\builds\Jayrock\src\Jayrock.Json\Json\Conversion\JsonConvert.cs:行号 106
    在 _1688openapisdk.DefaultAliClient.DoExecute[T](IAliRequest`1 request, String accessToken, DateTime timestamp) 位置 C:\Users\weijian.zhongwj\documents\visual studio 2010\Projects\1688openapisdk\1688openapisdk\DefaultAliClient.cs:行号 186
    在 _1688openapisdk.DefaultAliClient.Execute[T](IAliRequest`1 request, String accessToken, DateTime timestamp) 位置 C:\Users\weijian.zhongwj\documents\visual studio 2010\Projects\1688openapisdk\1688openapisdk\DefaultAliClient.cs:行号 107
+2013-10-24 13:30:54 ERROR: https://gw.open.1688.com/openapi/
+   在 Jayrock.Json.Conversion.ImportContext.Import(Type type, JsonReader reader) 位置 c:\builds\Jayrock\src\Jayrock.Json\Json\Conversion\ImportContext.cs:行号 64
+   在 Jayrock.Json.Conversion.JsonConvert.Import(Type type, JsonReader reader) 位置 c:\builds\Jayrock\src\Jayrock.Json\Json\Conversion\JsonConvert.cs:行号 122
+   在 Jayrock.Json.Conversion.JsonConvert.Import(Type type, TextReader reader) 位置 c:\builds\Jayrock\src\Jayrock.Json\Json\Conversion\JsonConvert.cs:行号 111
+   在 Jayrock.Json.Conversion.JsonConvert.Import(Type type, String text) 位置 c:\builds\Jayrock\src\Jayrock.Json\Json\Conversion\JsonConvert.cs:行号 106
+   在 _1688openapisdk.DefaultAliClient.DoExecute[T](IAliRequest`1 request, String accessToken, DateTime timestamp) 位置 C:\Users\weijian.zhongwj\documents\visual studio 2010\Projects\1688openapisdk\1688openapisdk\DefaultAliClient.cs:行号 191
+   在 _1688openapisdk.DefaultAliClient.Execute[T](IAliRequest`1 request, String accessToken, DateTime timestamp) 位置 C:\Users\weijian.zhongwj\documents\visual studio 2010\Projects\1688openapisdk\1688openapisdk\DefaultAliClient.cs:行号 107
+2013-10-24 13:31:14 ERROR: https://gw.open.1688.com/openapi/
+   在 Jayrock.Json.Conversion.ImportContext.Import(Type type, JsonReader reader) 位置 c:\builds\Jayrock\src\Jayrock.Json\Json\Conversion\ImportContext.cs:行号 64
+   在 Jayrock.Json.Conversion.JsonConvert.Import(Type type, JsonReader reader) 位置 c:\builds\Jayrock\src\Jayrock.Json\Json\Conversion\JsonConvert.cs:行号 122
+   在 Jayrock.Json.Conversion.JsonConvert.Import(Type type, TextReader reader) 位置 c:\builds\Jayrock\src\Jayrock.Json\Json\Conversion\JsonConvert.cs:行号 111
+   在 Jayrock.Json.Conversion.JsonConvert.Import(Type type, String text) 位置 c:\builds\Jayrock\src\Jayrock.Json\Json\Conversion\JsonConvert.cs:行号 106
+   在 _1688openapisdk.DefaultAliClient.DoExecute[T](IAliRequest`1 request, String accessToken, DateTime timestamp) 位置 C:\Users\weijian.zhongwj\documents\visual studio 2010\Projects\1688openapisdk\1688openapisdk\DefaultAliClient.cs:行号 191
+   在 _1688openapisdk.DefaultAliClient.Execute[T](IAliRequest`1 request, String accessToken, DateTime timestamp) 位置 C:\Users\weijian.zhongwj\documents\visual studio 2010\Projects\1688openapisdk\1688openapisdk\DefaultAliClient.cs:行号 107
+2013-10-24 13:33:07 ERROR: https://gw.open.1688.com/openapi/
+   在 Jayrock.Json.Conversion.ImportContext.Import(Type type, JsonReader reader) 位置 c:\builds\Jayrock\src\Jayrock.Json\Json\Conversion\ImportContext.cs:行号 64
+   在 Jayrock.Json.Conversion.JsonConvert.Import(Type type, JsonReader reader) 位置 c:\builds\Jayrock\src\Jayrock.Json\Json\Conversion\JsonConvert.cs:行号 122
+   在 Jayrock.Json.Conversion.JsonConvert.Import(Type type, TextReader reader) 位置 c:\builds\Jayrock\src\Jayrock.Json\Json\Conversion\JsonConvert.cs:行号 111
+   在 Jayrock.Json.Conversion.JsonConvert.Import(Type type, String text) 位置 c:\builds\Jayrock\src\Jayrock.Json\Json\Conversion\JsonConvert.cs:行号 106
+   在 _1688openapisdk.DefaultAliClient.DoExecute[T](IAliRequest`1 request, String accessToken, DateTime timestamp) 位置 C:\Users\weijian.zhongwj\documents\visual studio 2010\Projects\1688openapisdk\1688openapisdk\DefaultAliClient.cs:行号 191
+   在 _1688openapisdk.DefaultAliClient.Execute[T](IAliRequest`1 request, String accessToken, DateTime timestamp) 位置 C:\Users\weijian.zhongwj\documents\visual studio 2010\Projects\1688openapisdk\1688openapisdk\DefaultAliClient.cs:行号 107
+2013-10-24 13:36:31 ERROR: https://gw.open.1688.com/openapi/
+   在 Jayrock.Json.Conversion.ImportContext.Import(Type type, JsonReader reader) 位置 c:\builds\Jayrock\src\Jayrock.Json\Json\Conversion\ImportContext.cs:行号 64
+   在 Jayrock.Json.Conversion.JsonConvert.Import(Type type, JsonReader reader) 位置 c:\builds\Jayrock\src\Jayrock.Json\Json\Conversion\JsonConvert.cs:行号 122
+   在 Jayrock.Json.Conversion.JsonConvert.Import(Type type, TextReader reader) 位置 c:\builds\Jayrock\src\Jayrock.Json\Json\Conversion\JsonConvert.cs:行号 111
+   在 Jayrock.Json.Conversion.JsonConvert.Import(Type type, String text) 位置 c:\builds\Jayrock\src\Jayrock.Json\Json\Conversion\JsonConvert.cs:行号 106
+   在 _1688openapisdk.DefaultAliClient.DoExecute[T](IAliRequest`1 request, String accessToken, DateTime timestamp) 位置 C:\Users\weijian.zhongwj\documents\visual studio 2010\Projects\1688openapisdk\1688openapisdk\DefaultAliClient.cs:行号 191
+   在 _1688openapisdk.DefaultAliClient.Execute[T](IAliRequest`1 request, String accessToken, DateTime timestamp) 位置 C:\Users\weijian.zhongwj\documents\visual studio 2010\Projects\1688openapisdk\1688openapisdk\DefaultAliClient.cs:行号 107
+2013-10-24 13:38:34 ERROR: https://gw.open.1688.com/openapi/
+   在 Jayrock.Json.Conversion.ImportContext.Import(Type type, JsonReader reader) 位置 c:\builds\Jayrock\src\Jayrock.Json\Json\Conversion\ImportContext.cs:行号 64
+   在 Jayrock.Json.Conversion.JsonConvert.Import(Type type, JsonReader reader) 位置 c:\builds\Jayrock\src\Jayrock.Json\Json\Conversion\JsonConvert.cs:行号 122
+   在 Jayrock.Json.Conversion.JsonConvert.Import(Type type, TextReader reader) 位置 c:\builds\Jayrock\src\Jayrock.Json\Json\Conversion\JsonConvert.cs:行号 111
+   在 Jayrock.Json.Conversion.JsonConvert.Import(Type type, String text) 位置 c:\builds\Jayrock\src\Jayrock.Json\Json\Conversion\JsonConvert.cs:行号 106
+   在 _1688openapisdk.DefaultAliClient.DoExecute[T](IAliRequest`1 request, String accessToken, DateTime timestamp) 位置 C:\Users\weijian.zhongwj\documents\visual studio 2010\Projects\1688openapisdk\1688openapisdk\DefaultAliClient.cs:行号 191
+   在 _1688openapisdk.DefaultAliClient.Execute[T](IAliRequest`1 request, String accessToken, DateTime timestamp) 位置 C:\Users\weijian.zhongwj\documents\visual studio 2010\Projects\1688openapisdk\1688openapisdk\DefaultAliClient.cs:行号 107
+2013-10-24 13:41:37 ERROR: https://gw.open.1688.com/openapi/
+   在 Jayrock.Json.Conversion.ImportContext.Import(Type type, JsonReader reader) 位置 c:\builds\Jayrock\src\Jayrock.Json\Json\Conversion\ImportContext.cs:行号 64
+   在 Jayrock.Json.Conversion.JsonConvert.Import(Type type, JsonReader reader) 位置 c:\builds\Jayrock\src\Jayrock.Json\Json\Conversion\JsonConvert.cs:行号 122
+   在 Jayrock.Json.Conversion.JsonConvert.Import(Type type, TextReader reader) 位置 c:\builds\Jayrock\src\Jayrock.Json\Json\Conversion\JsonConvert.cs:行号 111
+   在 Jayrock.Json.Conversion.JsonConvert.Import(Type type, String text) 位置 c:\builds\Jayrock\src\Jayrock.Json\Json\Conversion\JsonConvert.cs:行号 106
+   在 _1688openapisdk.DefaultAliClient.DoExecute[T](IAliRequest`1 request, String accessToken, DateTime timestamp) 位置 C:\Users\weijian.zhongwj\documents\visual studio 2010\Projects\1688openapisdk\1688openapisdk\DefaultAliClient.cs:行号 191
+   在 _1688openapisdk.DefaultAliClient.Execute[T](IAliRequest`1 request, String accessToken, DateTime timestamp) 位置 C:\Users\weijian.zhongwj\documents\visual studio 2010\Projects\1688openapisdk\1688openapisdk\DefaultAliClient.cs:行号 107
