@@ -6,6 +6,9 @@ using _1688openapisdk.domain;
 
 namespace _1688openapisdk.request
 {
+    /// <summary>
+    /// 获取单个产品信息
+    /// </summary>
     class OfferQueryRequest : IAliRequest<OfferResponse>
     {
         /// <summary>

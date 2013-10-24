@@ -5,6 +5,9 @@ using _1688openapisdk.response;
 
 namespace _1688openapisdk.request
 {
+    /// <summary>
+    /// 无需物流（虚拟）发货
+    /// </summary>
     public class LogisticsDummySendRequest : IAliRequest<LogisticsDummySendResponse>
     {
         /// <summary>

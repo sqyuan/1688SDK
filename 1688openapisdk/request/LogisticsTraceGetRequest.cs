@@ -5,6 +5,9 @@ using _1688openapisdk.response;
 
 namespace _1688openapisdk.request
 {
+    /// <summary>
+    /// 物流流转信息查询
+    /// </summary>
     public class LogisticsTraceGetRequest : IAliRequest<LogisticsTraceGetResponse>
     {
         /// <summary>

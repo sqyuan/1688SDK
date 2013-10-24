@@ -6,6 +6,9 @@ using _1688openapisdk.domain;
 
 namespace _1688openapisdk.request
 {
+    /// <summary>
+    /// 获取物流公司列表
+    /// </summary>
     class LogisticsCompaniesGetRequest : IAliRequest<LogisticsCompaniesGetResponse>
     {
         /// <summary>

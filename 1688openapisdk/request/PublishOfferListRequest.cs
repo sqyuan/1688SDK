@@ -7,6 +7,9 @@ using _1688openapisdk.domain;
 
 namespace _1688openapisdk.request
 {
+    /// <summary>
+    /// 获取当前会话会员的已发布产品信息列表
+    /// </summary>
     public class PublishOfferListRequest : IAliRequest<PublishOfferListResponse>
     {
 

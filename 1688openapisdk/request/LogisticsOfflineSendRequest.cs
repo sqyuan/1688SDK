@@ -5,6 +5,9 @@ using _1688openapisdk.response;
 
 namespace _1688openapisdk.request
 {
+    /// <summary>
+    /// 自己联系物流（线下物流）发货
+    /// </summary>
     public class LogisticsOfflineSendRequest : IAliRequest<LogisticsOfflineSendResponse>
     {
         /// <summary>
