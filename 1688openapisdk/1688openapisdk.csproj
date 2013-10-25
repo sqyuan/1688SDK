@@ -64,6 +64,9 @@
     <Compile Include="domain\order\OrderInfo.cs" />
     <Compile Include="domain\order\TradeRateParam.cs" />
     <Compile Include="domain\order\WeightTariff.cs" />
+    <Compile Include="domain\photoalbum\Album.cs" />
+    <Compile Include="domain\photoalbum\Image.cs" />
+    <Compile Include="domain\photoalbum\Profile.cs" />
     <Compile Include="domain\product\OfferImageInfo.cs" />
     <Compile Include="domain\product\PriceRanges.cs" />
     <Compile Include="domain\product\ProductFeatureInfo.cs" />
@@ -85,6 +88,7 @@
     <Compile Include="request\order\TradeOrderBatchRateRequest.cs" />
     <Compile Include="request\order\TradeOrderDetailGetRequest.cs" />
     <Compile Include="request\order\TradeOrderListGetRequest.cs" />
+    <Compile Include="request\photoalbum\IbankProfileGetRequest.cs" />
     <Compile Include="request\product\AllOfferListRequest.cs" />
     <Compile Include="request\logistics\LogisticsCompaniesGetRequest.cs" />
     <Compile Include="request\logistics\LogisticsDummySendRequest.cs" />
@@ -107,6 +111,7 @@
     <Compile Include="response\order\TradeOrderBatchRateResponse.cs" />
     <Compile Include="response\order\TradeOrderDetailGetResponse.cs" />
     <Compile Include="response\order\TradeOrderListGetResponse.cs" />
+    <Compile Include="response\photoalbum\IbankProfileGetResponse.cs" />
     <Compile Include="response\product\OfferResponse.cs" />
     <Compile Include="response\product\PublishOfferListResponse.cs" />
     <Compile Include="util\WebUtils.cs" />

@@ -5,6 +5,8 @@ using _1688openapisdk.request;
 using _1688openapisdk.response;
 using _1688openapisdk.request.order;
 using _1688openapisdk.response.order;
+using _1688openapisdk.request.photoalbum;
+using _1688openapisdk.response.photoalbum;
 
 namespace _1688openapisdk.example
 {
@@ -148,6 +150,11 @@ namespace _1688openapisdk.example
             Console.WriteLine(areaCodeGetResponse.toReturn);
             Console.WriteLine(accessTokenResponse);
 
+            ///本接口实现获取当前用户信息，包括可用空间和总空间等
+            IbankProfileGetRequest ibankProfileGetRequest = new IbankProfileGetRequest();
+            ibankProfileGetRequest.access_token = accessTokenResponse.accessToken;
+            IbankProfileGetResponse IbankProfileGetResponse = defaultAliClient.Execute(ibankProfileGetRequest);
+            Console.WriteLine(IbankProfileGetResponse);
         }
     }
 }
