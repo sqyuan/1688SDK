@@ -5,7 +5,7 @@ using _1688openapisdk.domain.photoalbum;
 
 namespace _1688openapisdk.response.photoalbum
 {
-    public class IbankAlbumCreateResponse
+    public class IbankAlbumCreateResponse:AliResponse
     {
         public AlbumCreateResult toReturn { get; set; }
     }

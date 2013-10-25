@@ -7,6 +7,8 @@ using _1688openapisdk.request.order;
 using _1688openapisdk.response.order;
 using _1688openapisdk.request.photoalbum;
 using _1688openapisdk.response.photoalbum;
+using _1688openapisdk.request.product;
+using _1688openapisdk.response.product;
 
 namespace _1688openapisdk.example
 {
@@ -66,6 +68,17 @@ namespace _1688openapisdk.example
             offerQueryRequest.returnFields = new string[] { "offerId", "subject", "productFeatureList", "details", "memberId", "postCategryId", "saledCount", "amountOnSale", "priceRanges", "unit", "gmtModified", "imageList" };
             OfferResponse offerResponse = defaultAliClient.Execute(offerQueryRequest);
             Console.WriteLine(offerResponse.toReturn.ToString());
+
+            ///增量修改产品库存 offer.modify.stock -- version: 1
+            OfferModifyStockRequest offerModifyStockRequest = new OfferModifyStockRequest();
+            offerModifyStockRequest.offerId = 1295193597;
+            offerModifyStockRequest.offerAmountChange = 515;
+            offerModifyStockRequest.access_token = accessTokenResponse.accessToken;
+            Dictionary<string, string> skuAmountChange = new Dictionary<string, string>();
+            skuAmountChange.Add("aaa", "123");
+            offerModifyStockRequest.skuAmountChange = skuAmountChange;
+            OfferModifyStockResponse offerModifyStockResponse = defaultAliClient.Execute(offerModifyStockRequest);
+            Console.WriteLine(offerModifyStockRequest);
 
             ///获取提供该服务的物流公司列表 e56.logistics.companies.get -- version: 1
             LogisticsCompaniesGetRequest logisticsCompaniesGetRequest = new LogisticsCompaniesGetRequest();
@@ -155,6 +168,25 @@ namespace _1688openapisdk.example
             ibankProfileGetRequest.access_token = accessTokenResponse.accessToken;
             IbankProfileGetResponse IbankProfileGetResponse = defaultAliClient.Execute(ibankProfileGetRequest);
             Console.WriteLine(IbankProfileGetResponse);
+
+            ///本接口实现获取当前用户相册列表
+            IbankAlbumListRequest ibankAlbumListRequest = new IbankAlbumListRequest();
+            ibankAlbumListRequest.access_token = accessTokenResponse.accessToken;
+            ibankAlbumListRequest.albumType = "MY";
+            ibankAlbumListRequest.pageNo = 1;
+            ibankAlbumListRequest.pageSize = 20;
+            IbankAlbumListResponse ibankAlbumListResponse = defaultAliClient.Execute(ibankAlbumListRequest);
+            Console.WriteLine(ibankAlbumListResponse.toReturn);
+
+            ///本接口实现获取当前用户相册内图片列表
+            IbankImageListRequest ibankImageListRequest = new IbankImageListRequest();
+            ibankImageListRequest.access_token = accessTokenResponse.accessToken;
+            ibankImageListRequest.albumId = 10971051;
+            ibankImageListRequest.pageNo = 1;
+            ibankImageListRequest.pageSize = 50;
+            IbankImageListResponse ibankImageListResponse = defaultAliClient.Execute(ibankImageListRequest);
+            Console.WriteLine(ibankImageListResponse.toReturn);
+
         }
     }
 }
