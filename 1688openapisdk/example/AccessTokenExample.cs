@@ -126,7 +126,27 @@ namespace _1688openapisdk.example
             TradeOrderDetailGetResponse tradeOrderDetailGetResponse = defaultAliClient.Execute(tradeOrderDetailGetRequest);
             Console.WriteLine(tradeOrderDetailGetResponse);
 
+            ///本接口实现获取指定会员在阿里巴巴中文站上的发货地址列表信息
+            TradeFreightSendGoodsAddressListGetRequest tradeFreightSendGoodsAddressListGetRequest = new TradeFreightSendGoodsAddressListGetRequest();
+            tradeFreightSendGoodsAddressListGetRequest.access_token = accessTokenResponse.accessToken;
+            tradeFreightSendGoodsAddressListGetRequest.memberId = "testfree";
+            tradeFreightSendGoodsAddressListGetRequest.returnFields = "deliveryAddressId,updateTime,isCommonUse,contactName,location,address,postcode,telephone,mobilephone";
+            TradeFreightSendGoodsAddressListGetResponse tradeFreightSendGoodsAddressListGetResponse = defaultAliClient.Execute(tradeFreightSendGoodsAddressListGetRequest);
+            Console.WriteLine(tradeFreightSendGoodsAddressListGetResponse);
 
+
+            ///本接口实现获取指定会员在阿里巴巴中文站上的物流模板列表信息
+            TradeFreightTemplateListGetRequest tradeFreightTemplateListGetRequest = new TradeFreightTemplateListGetRequest();
+            tradeFreightTemplateListGetRequest.access_token = accessTokenResponse.accessToken;
+            tradeFreightTemplateListGetRequest.memberId = "testfree";
+            TradeFreightTemplateListGetResponse tradeFreightTemplateListGetResponse = defaultAliClient.Execute(tradeFreightTemplateListGetRequest);
+            Console.WriteLine(tradeFreightTemplateListGetResponse);
+
+            ///获取省份编码信息
+            AreaCodeGetRequest areaCodeGetRequest = new AreaCodeGetRequest();
+            AreaCodeGetResponse areaCodeGetResponse = defaultAliClient.Execute(areaCodeGetRequest);
+            Console.WriteLine(areaCodeGetResponse.toReturn);
+            Console.WriteLine(accessTokenResponse);
 
         }
     }

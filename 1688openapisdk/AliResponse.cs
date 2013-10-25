@@ -32,9 +32,9 @@ namespace _1688openapisdk
         public int total { get; set; }
 
         /// <summary>
-        /// 序列化
+        /// 未序列化原始字符串
         /// </summary>
-        public void seriable(string body) { }
+        public string body { get; set; }
 
         /// <summary>
         /// 响应结果是否错误

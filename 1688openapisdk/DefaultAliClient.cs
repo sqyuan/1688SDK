@@ -177,6 +177,7 @@ namespace _1688openapisdk
                             if (responseObj == null)
                             {
                                 rsp = (T)Jayrock.Json.Conversion.JsonConvert.Import(typeof(T), body);
+                                rsp.body = body;
                                 return rsp;
                             }
                             bool code = (bool)responseObj["success"];
@@ -189,11 +190,13 @@ namespace _1688openapisdk
                             if (((Type)request.GetReturnType()).FullName.StartsWith("System.Collections.Generic.List") || request.GetReturnType().GetType().IsArray)
                             {
                                 rsp = (T)Jayrock.Json.Conversion.JsonConvert.Import(typeof(T), responseObj.ToString());
+                                rsp.body = responseObj.ToString();
                             }
                             else
                             {
                                 String newBody = "{toReturn:" + toReturn[0].ToString() + "}";
                                 rsp = (T)Jayrock.Json.Conversion.JsonConvert.Import(typeof(T), newBody);
+                                rsp.body = toReturn[0].ToString();
                             }
                             rsp.success = code;
                             rsp.total = total;

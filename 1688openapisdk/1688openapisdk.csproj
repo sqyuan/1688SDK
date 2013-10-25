@@ -57,10 +57,13 @@
     <Compile Include="domain\logistics\LogisticsOrder.cs" />
     <Compile Include="domain\logistics\LogisticsStep.cs" />
     <Compile Include="domain\logistics\LogisticsTrace.cs" />
+    <Compile Include="domain\order\DeliveryAddress.cs" />
+    <Compile Include="domain\order\FreightTemplate.cs" />
     <Compile Include="domain\order\Logistics.cs" />
     <Compile Include="domain\order\OrderEntry.cs" />
     <Compile Include="domain\order\OrderInfo.cs" />
     <Compile Include="domain\order\TradeRateParam.cs" />
+    <Compile Include="domain\order\WeightTariff.cs" />
     <Compile Include="domain\product\OfferImageInfo.cs" />
     <Compile Include="domain\product\PriceRanges.cs" />
     <Compile Include="domain\product\ProductFeatureInfo.cs" />
@@ -76,6 +79,9 @@
     <Compile Include="domain\member\MemberInfo.cs" />
     <Compile Include="domain\product\OfferDetailInfo.cs" />
     <Compile Include="request\AccessTokenRequest.cs" />
+    <Compile Include="request\order\AreaCodeGetRequest.cs" />
+    <Compile Include="request\order\TradeFreightSendGoodsAddressListGetRequest.cs" />
+    <Compile Include="request\order\TradeFreightTemplateListGetRequest.cs" />
     <Compile Include="request\order\TradeOrderBatchRateRequest.cs" />
     <Compile Include="request\order\TradeOrderDetailGetRequest.cs" />
     <Compile Include="request\order\TradeOrderListGetRequest.cs" />
@@ -95,6 +101,9 @@
     <Compile Include="response\logistics\LogisticsOrderGetResponse.cs" />
     <Compile Include="response\logistics\LogisticsTraceGetResponse.cs" />
     <Compile Include="response\member\MemberInfoResponse.cs" />
+    <Compile Include="response\order\AreaCodeGetResponse.cs" />
+    <Compile Include="response\order\TradeFreightSendGoodsAddressListGetResponse.cs" />
+    <Compile Include="response\order\TradeFreightTemplateListGetResponse.cs" />
     <Compile Include="response\order\TradeOrderBatchRateResponse.cs" />
     <Compile Include="response\order\TradeOrderDetailGetResponse.cs" />
     <Compile Include="response\order\TradeOrderListGetResponse.cs" />

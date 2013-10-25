@@ -5,6 +5,9 @@ using _1688openapisdk.response.order;
 
 namespace _1688openapisdk.request.order
 {
+    /// <summary>
+    /// 本接口查询当前会话会员的交易订单详情
+    /// </summary>
     public class TradeOrderDetailGetRequest : IAliRequest<TradeOrderDetailGetResponse>
     {
         public string access_token { get; set; }
