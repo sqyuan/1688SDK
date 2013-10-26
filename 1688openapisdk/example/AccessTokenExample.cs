@@ -9,6 +9,8 @@ using _1688openapisdk.request.photoalbum;
 using _1688openapisdk.response.photoalbum;
 using _1688openapisdk.request.product;
 using _1688openapisdk.response.product;
+using _1688openapisdk.request.category;
+using _1688openapisdk.response.category;
 
 namespace _1688openapisdk.example
 {
@@ -187,6 +189,17 @@ namespace _1688openapisdk.example
             IbankImageListResponse ibankImageListResponse = defaultAliClient.Execute(ibankImageListRequest);
             Console.WriteLine(ibankImageListResponse.toReturn);
 
+            ///根据叶子类目ID获取类目发布属性信息 offerPostFeatures.get -- version: 1
+            OfferPostFeaturesGetRequest offerPostFeaturesGetRequest = new OfferPostFeaturesGetRequest();
+            offerPostFeaturesGetRequest.categoryID = 1031910;
+            OfferPostFeaturesGetResponse OfferPostFeaturesGetResponse = defaultAliClient.Execute(offerPostFeaturesGetRequest);
+            Console.WriteLine(OfferPostFeaturesGetResponse);
+
+            //根据类目ID获取商品发布类目信息 category.getPostCatList -- version: 1
+            CategoryGetPostCatListRequest categoryGetPostCatListRequest = new CategoryGetPostCatListRequest();
+            categoryGetPostCatListRequest.catIDs = "1031910,10166";
+            CategoryGetPostCatListResponse categoryGetPostCatListResponse = defaultAliClient.Execute(categoryGetPostCatListRequest);
+            Console.WriteLine(categoryGetPostCatListResponse);
         }
     }
 }

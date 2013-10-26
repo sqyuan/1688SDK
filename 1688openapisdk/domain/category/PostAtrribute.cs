@@ -5,9 +5,9 @@ using System.Text;
 namespace _1688openapisdk.domain.category
 {
     /// <summary>
-    ///  类目产品属性信息  
+    /// 类目下所有发布属性信息
     /// </summary>
-    public class ProductAttributesInfo
+    public class PostAtrribute
     {
         /// <summary>
         /// 产品属性ID
@@ -15,19 +15,24 @@ namespace _1688openapisdk.domain.category
         public int fid { get; set; }
 
         /// <summary>
+        /// 父属性ID
+        /// </summary>
+        public int parentId { get; set; }
+
+        /// <summary>
         /// 产品属性单位
         /// </summary>
         public string unit { get; set; }
 
         /// <summary>
-        /// 产品属性枚举值。当‘填写类型’为单选或者多选时，该变量有效。多个枚举值之间使用;号（半角分号）分隔
+        /// 产品属性枚举值
         /// </summary>
-        public string[] values { get; set; }
+        public FeatureIdValue[] featureIdValues { get; set; }
 
         /// <summary>
-        /// 填写输入的长度限制，比如‘30’。若无限制，则返回null
+        /// 子属性值，当‘填写类型’为单选或者多选时，该变量有效。多个枚举值之间使用;号（半角分号）分隔
         /// </summary>
-        public int inputMaxLength { get; set; }
+        public string[] childrenFids { get; set; }
 
         /// <summary>
         /// 产品属性名称
@@ -40,9 +45,9 @@ namespace _1688openapisdk.domain.category
         public string showType { get; set; }
 
         /// <summary>
-        /// 该属性是否为必填项。true：必填；false：非必填
+        /// 该属性是否为必填项。Y：必填；N：非必填
         /// </summary>
-        public Boolean required { get; set; }
+        public string isNeeded { get; set; }
 
         /// <summary>
         /// 显示顺序
@@ -50,7 +55,7 @@ namespace _1688openapisdk.domain.category
         public int order { get; set; }
 
         /// <summary>
-        /// 交易Flag
+        /// 交易Flag(交易属性特有)
         /// </summary>
         public string fieldFlag { get; set; }
 
@@ -63,11 +68,6 @@ namespace _1688openapisdk.domain.category
         /// 备注
         /// </summary>
         public string note { get; set; }
-
-        /// <summary>
-        /// Offer类型。2:供应
-        /// </summary>
-        public string offerType { get; set; }
 
         /// <summary>
         /// 引导文案
@@ -83,16 +83,6 @@ namespace _1688openapisdk.domain.category
         /// 默认值
         /// </summary>
         public string defaultValue { get; set; }
-
-        /// <summary>
-        /// 属性值ID
-        /// </summary>
-        public long[] valueIds { get; set; }
-
-        /// <summary>
-        /// 类目ID
-        /// </summary>
-        public long categoryId { get; set; }
 
         /// <summary>
         /// 是否关键属性
@@ -112,7 +102,6 @@ namespace _1688openapisdk.domain.category
         /// <summary>
         /// 是否支持自定义属性
         /// </summary>
-        /// 
         public Boolean supportDefinedValues { get; set; }
 
         /// <summary>
