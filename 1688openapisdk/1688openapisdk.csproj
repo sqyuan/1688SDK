@@ -60,6 +60,8 @@
     <Compile Include="domain\category\ProductAttributesInfo.cs" />
     <Compile Include="domain\category\StandardSpu.cs" />
     <Compile Include="domain\category\StandardSpuAttrValues.cs" />
+    <Compile Include="domain\customer\GroupsTab.cs" />
+    <Compile Include="domain\customer\Relation.cs" />
     <Compile Include="domain\member\AddressLocation.cs" />
     <Compile Include="domain\logistics\LogisticsOrder.cs" />
     <Compile Include="domain\logistics\LogisticsStep.cs" />
@@ -98,6 +100,10 @@
     <Compile Include="request\category\CategoryGetCatePathRequest.cs" />
     <Compile Include="request\category\ProductAttributesGetRequest.cs" />
     <Compile Include="request\category\SpubyattributeGetRequest.cs" />
+    <Compile Include="request\customer\AcrmCustomerGroupGetRequest.cs" />
+    <Compile Include="request\customer\AcrmCustomerRelationGetRequest.cs" />
+    <Compile Include="request\customer\AcrmCustomerTradeGetRequest.cs" />
+    <Compile Include="request\customer\AcrmGroupsGetRequest.cs" />
     <Compile Include="request\member\CompanyGetRequest.cs" />
     <Compile Include="request\member\CreditInfoGetRequest.cs" />
     <Compile Include="response\category\CategoryGetCatePathResponse.cs" />
@@ -139,6 +145,10 @@
     <Compile Include="response\category\OfferPostFeaturesGetResponse.cs" />
     <Compile Include="response\category\ProductAttributesGetResponse.cs" />
     <Compile Include="response\category\SpubyattributeGetResponse.cs" />
+    <Compile Include="response\customer\AcrmCustomerGroupGetResponse.cs" />
+    <Compile Include="response\customer\AcrmCustomerRelationGetResponse.cs" />
+    <Compile Include="response\customer\AcrmCustomerTradeGetResponse.cs" />
+    <Compile Include="response\customer\AcrmGroupsGetResponse.cs" />
     <Compile Include="response\logistics\LogisticsCompaniesGetResponse.cs" />
     <Compile Include="response\logistics\LogisticsDummySendResponse.cs" />
     <Compile Include="response\logistics\LogisticsOfflineSendResponse.cs" />

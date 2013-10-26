@@ -764,3 +764,18 @@
    在 Jayrock.Json.Conversion.JsonConvert.Import(Type type, String text) 位置 c:\builds\Jayrock\src\Jayrock.Json\Json\Conversion\JsonConvert.cs:行号 106
    在 _1688openapisdk.DefaultAliClient.DoExecute[T](IAliRequest`1 request, String accessToken, DateTime timestamp) 位置 C:\Users\weijian.zhongwj\documents\visual studio 2010\Projects\1688openapisdk\1688openapisdk\DefaultAliClient.cs:行号 192
    在 _1688openapisdk.DefaultAliClient.Execute[T](IAliRequest`1 request, String accessToken, DateTime timestamp) 位置 C:\Users\weijian.zhongwj\documents\visual studio 2010\Projects\1688openapisdk\1688openapisdk\DefaultAliClient.cs:行号 107
+2013-10-26 16:59:24 ERROR: https://gw.open.1688.com/openapi/
+   在 System.Net.HttpWebRequest.GetResponse()
+   在 _1688openapisdk.WebUtils.CreatePostHttpResponse(String url, IDictionary`2 parameters, Nullable`1 timeout, String userAgent, Encoding requestEncoding, CookieCollection cookies) 位置 C:\Users\weijian.zhongwj\documents\visual studio 2010\Projects\1688openapisdk\1688openapisdk\util\WebUtils.cs:行号 126
+   在 _1688openapisdk.DefaultAliClient.DoExecute[T](IAliRequest`1 request, String accessToken, DateTime timestamp) 位置 C:\Users\weijian.zhongwj\documents\visual studio 2010\Projects\1688openapisdk\1688openapisdk\DefaultAliClient.cs:行号 146
+   在 _1688openapisdk.DefaultAliClient.Execute[T](IAliRequest`1 request, String accessToken, DateTime timestamp) 位置 C:\Users\weijian.zhongwj\documents\visual studio 2010\Projects\1688openapisdk\1688openapisdk\DefaultAliClient.cs:行号 107
+2013-10-26 16:59:49 ERROR: https://gw.open.1688.com/openapi/
+   在 System.Net.HttpWebRequest.GetResponse()
+   在 _1688openapisdk.WebUtils.CreatePostHttpResponse(String url, IDictionary`2 parameters, Nullable`1 timeout, String userAgent, Encoding requestEncoding, CookieCollection cookies) 位置 C:\Users\weijian.zhongwj\documents\visual studio 2010\Projects\1688openapisdk\1688openapisdk\util\WebUtils.cs:行号 126
+   在 _1688openapisdk.DefaultAliClient.DoExecute[T](IAliRequest`1 request, String accessToken, DateTime timestamp) 位置 C:\Users\weijian.zhongwj\documents\visual studio 2010\Projects\1688openapisdk\1688openapisdk\DefaultAliClient.cs:行号 146
+   在 _1688openapisdk.DefaultAliClient.Execute[T](IAliRequest`1 request, String accessToken, DateTime timestamp) 位置 C:\Users\weijian.zhongwj\documents\visual studio 2010\Projects\1688openapisdk\1688openapisdk\DefaultAliClient.cs:行号 107
+2013-10-26 17:00:56 ERROR: https://gw.open.1688.com/openapi/
+   在 System.Net.HttpWebRequest.GetResponse()
+   在 _1688openapisdk.WebUtils.CreatePostHttpResponse(String url, IDictionary`2 parameters, Nullable`1 timeout, String userAgent, Encoding requestEncoding, CookieCollection cookies) 位置 C:\Users\weijian.zhongwj\documents\visual studio 2010\Projects\1688openapisdk\1688openapisdk\util\WebUtils.cs:行号 126
+   在 _1688openapisdk.DefaultAliClient.DoExecute[T](IAliRequest`1 request, String accessToken, DateTime timestamp) 位置 C:\Users\weijian.zhongwj\documents\visual studio 2010\Projects\1688openapisdk\1688openapisdk\DefaultAliClient.cs:行号 146
+   在 _1688openapisdk.DefaultAliClient.Execute[T](IAliRequest`1 request, String accessToken, DateTime timestamp) 位置 C:\Users\weijian.zhongwj\documents\visual studio 2010\Projects\1688openapisdk\1688openapisdk\DefaultAliClient.cs:行号 107

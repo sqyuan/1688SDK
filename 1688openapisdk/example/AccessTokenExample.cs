@@ -13,6 +13,8 @@ using _1688openapisdk.request.category;
 using _1688openapisdk.response.category;
 using _1688openapisdk.request.member;
 using _1688openapisdk.response.member;
+using _1688openapisdk.request.customer;
+using _1688openapisdk.response.customer;
 
 namespace _1688openapisdk.example
 {
@@ -215,6 +217,41 @@ namespace _1688openapisdk.example
             categoryGetPostCatListRequest.catIDs = "1031910,10166";
             CategoryGetPostCatListResponse categoryGetPostCatListResponse = defaultAliClient.Execute(categoryGetPostCatListRequest);
             Console.WriteLine(categoryGetPostCatListResponse);
+
+            ///本接口实现阿里巴巴中文站登录会员，根据交易信息获取当前卖家的会员信息
+            AcrmCustomerTradeGetRequest acrmCustomerTradeGetRequest = new AcrmCustomerTradeGetRequest();
+            acrmCustomerTradeGetRequest.memberId = "testfree";
+            acrmCustomerTradeGetRequest.access_token = accessTokenResponse.accessToken;
+            AcrmCustomerTradeGetResponse acrmCustomerTradeGetResponse = defaultAliClient.Execute(acrmCustomerTradeGetRequest);
+            Console.WriteLine(acrmCustomerTradeGetResponse);
+
+            ///查询某个memberId下面所有的分组标签
+            AcrmGroupsGetRequest acrmGroupsGetRequest = new AcrmGroupsGetRequest();
+            acrmGroupsGetRequest.memberId = "testfree";
+            acrmGroupsGetRequest.access_token = accessTokenResponse.accessToken;
+            AcrmGroupsGetResponse AcrmGroupsGetResponse = defaultAliClient.Execute(acrmGroupsGetRequest);
+            Console.WriteLine(AcrmGroupsGetResponse);
+
+            ///本接口实现阿里巴巴中文站登录会员，根据标签获取当前卖家的会员信息
+            AcrmCustomerGroupGetRequest acrmCustomerGroupGetRequest = new AcrmCustomerGroupGetRequest();
+            acrmCustomerGroupGetRequest.memberId = "testfree";
+            acrmCustomerGroupGetRequest.access_token = accessTokenResponse.accessToken;
+            acrmCustomerGroupGetRequest.groupId = 8416600;
+            acrmCustomerGroupGetRequest.pageNum = 1;
+            acrmCustomerGroupGetRequest.pageSize = 20;
+            AcrmCustomerGroupGetResponse acrmCustomerGroupGetResponse = defaultAliClient.Execute(acrmCustomerGroupGetRequest);
+            Console.WriteLine(acrmCustomerGroupGetResponse);
+
+            ///本接口实现阿里巴巴中文站登录会员，根据等级获取当前卖家的会员信息
+            AcrmCustomerRelationGetRequest AcrmCustomerRelationGetRequest = new AcrmCustomerRelationGetRequest();
+            AcrmCustomerRelationGetRequest.memberId = "testfree";
+            AcrmCustomerRelationGetRequest.access_token = accessTokenResponse.accessToken;
+            AcrmCustomerRelationGetRequest.level = 1;
+            AcrmCustomerRelationGetRequest.pageNum = 1;
+            AcrmCustomerRelationGetRequest.pageSize = 20;
+            AcrmCustomerRelationGetResponse AcrmCustomerRelationGetResponse = defaultAliClient.Execute(AcrmCustomerRelationGetRequest);
+            Console.WriteLine(AcrmCustomerRelationGetResponse);
+            
         }
     }
 }
