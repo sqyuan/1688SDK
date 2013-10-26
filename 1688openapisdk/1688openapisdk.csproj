@@ -64,6 +64,8 @@
     <Compile Include="domain\logistics\LogisticsOrder.cs" />
     <Compile Include="domain\logistics\LogisticsStep.cs" />
     <Compile Include="domain\logistics\LogisticsTrace.cs" />
+    <Compile Include="domain\member\CompanyInfo.cs" />
+    <Compile Include="domain\member\CreditInfo.cs" />
     <Compile Include="domain\order\DeliveryAddress.cs" />
     <Compile Include="domain\order\FreightTemplate.cs" />
     <Compile Include="domain\order\Logistics.cs" />
@@ -96,6 +98,8 @@
     <Compile Include="request\category\CategoryGetCatePathRequest.cs" />
     <Compile Include="request\category\ProductAttributesGetRequest.cs" />
     <Compile Include="request\category\SpubyattributeGetRequest.cs" />
+    <Compile Include="request\member\CompanyGetRequest.cs" />
+    <Compile Include="request\member\CreditInfoGetRequest.cs" />
     <Compile Include="response\category\CategoryGetCatePathResponse.cs" />
     <Compile Include="request\category\CategoryGetCatListByParentIdRequest.cs" />
     <Compile Include="request\category\CategoryGetPostCatListRequest.cs" />
@@ -140,6 +144,8 @@
     <Compile Include="response\logistics\LogisticsOfflineSendResponse.cs" />
     <Compile Include="response\logistics\LogisticsOrderGetResponse.cs" />
     <Compile Include="response\logistics\LogisticsTraceGetResponse.cs" />
+    <Compile Include="response\member\CompanyGetResponse.cs" />
+    <Compile Include="response\member\CreditInfoGetResponse.cs" />
     <Compile Include="response\member\MemberInfoResponse.cs" />
     <Compile Include="response\order\AreaCodeGetResponse.cs" />
     <Compile Include="response\order\TradeFreightSendGoodsAddressListGetResponse.cs" />

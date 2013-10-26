@@ -11,6 +11,8 @@ using _1688openapisdk.request.product;
 using _1688openapisdk.response.product;
 using _1688openapisdk.request.category;
 using _1688openapisdk.response.category;
+using _1688openapisdk.request.member;
+using _1688openapisdk.response.member;
 
 namespace _1688openapisdk.example
 {
@@ -41,6 +43,19 @@ namespace _1688openapisdk.example
             Jayrock.Json.Conversion.JsonConvert.Export(memberInfoResponse, writer1);
             string str1 = writer1.ToString();
             Console.WriteLine(str1);
+
+            ///获取阿里巴巴阿中国网站会员诚信信息。包括诚信通和诚信保障相关数据
+            CreditInfoGetRequest creditInfoGetRequest = new CreditInfoGetRequest();
+            creditInfoGetRequest.memberIds = "mmm;cnabblp";
+            CreditInfoGetResponse creditInfoGetResponse = defaultAliClient.Execute(creditInfoGetRequest);
+            Console.WriteLine(creditInfoGetResponse);
+
+            ///获取阿里巴巴中国网站会员的公司库信息
+            CompanyGetRequest companyGetRequest = new CompanyGetRequest();
+            companyGetRequest.memberId = "mmm";
+            companyGetRequest.access_token = accessTokenResponse.memberId;
+            CompanyGetResponse companyGetResponse = defaultAliClient.Execute(companyGetRequest);
+            Console.WriteLine(companyGetResponse);
 
             ///获取阿里巴巴中国网站会员已发布的产品信息列表 offer.getPublishOfferList 示例
             PublishOfferListRequest publishOfferListRequest = new PublishOfferListRequest();
