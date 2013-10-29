@@ -103,6 +103,7 @@
     <Compile Include="DefaultAliLogger.cs" />
     <Compile Include="domain\member\MemberInfo.cs" />
     <Compile Include="domain\product\OfferDetailInfo.cs" />
+    <Compile Include="example\ExampleForABB.cs" />
     <Compile Include="request\AccessTokenRequest.cs" />
     <Compile Include="request\category\CategoryGetCatePathRequest.cs" />
     <Compile Include="request\category\ProductAttributesGetRequest.cs" />

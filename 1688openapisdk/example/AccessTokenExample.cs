@@ -22,7 +22,8 @@ namespace _1688openapisdk.example
 {
     class AccessTokenExample
     {
-        static void Main(string[] args)
+        static void mytest()
+        //static void Main(string[] args)
         {
             ///获取accesstoken示例，注意有效期
             DefaultAliClient defaultAliClient = new DefaultAliClient("https://gw.open.1688.com/openapi/", "1002071", "WsRIC:O6CF2");
@@ -65,6 +66,8 @@ namespace _1688openapisdk.example
             PublishOfferListRequest publishOfferListRequest = new PublishOfferListRequest();
             publishOfferListRequest.access_token = accessTokenResponse.accessToken;
             publishOfferListRequest.type = "SALE";
+            publishOfferListRequest.pageSize = 10;
+            publishOfferListRequest.page = 2;
             publishOfferListRequest.returnFields = new string[] { "offerId", "subject", "productFeatureList", "details", "memberId", "postCategryId", "saledCount", "amountOnSale", "priceRanges", "unit", "gmtModified", "imageList" };
             PublishOfferListResponse publishOfferListResponse = defaultAliClient.Execute(publishOfferListRequest);
             Console.WriteLine(publishOfferListResponse.toReturn);
@@ -86,17 +89,17 @@ namespace _1688openapisdk.example
             OfferQueryRequest offerQueryRequest = new OfferQueryRequest();
             offerQueryRequest.access_token = accessTokenResponse.accessToken;
             offerQueryRequest.offerId = 1224610587;
-            offerQueryRequest.returnFields = new string[] { "offerId", "subject", "productFeatureList", "details", "memberId", "postCategryId", "saledCount", "amountOnSale", "priceRanges", "unit", "gmtModified", "imageList" };
+            offerQueryRequest.returnFields = new string[] { "offerId", "subject", "productFeatureList", "details", "memberId", "postCategryId", "saledCount", "amount", "amountOnSale", "priceRanges", "unit", "gmtModified", "imageList" };
             OfferResponse offerResponse = defaultAliClient.Execute(offerQueryRequest);
             Console.WriteLine(offerResponse.toReturn.ToString());
 
             ///增量修改产品库存 offer.modify.stock -- version: 1
             OfferModifyStockRequest offerModifyStockRequest = new OfferModifyStockRequest();
             offerModifyStockRequest.offerId = 1295193597;
-            offerModifyStockRequest.offerAmountChange = 515;
+            offerModifyStockRequest.offerAmountChange = 700;
             offerModifyStockRequest.access_token = accessTokenResponse.accessToken;
             Dictionary<string, string> skuAmountChange = new Dictionary<string, string>();
-            skuAmountChange.Add("aaa", "123");
+            //skuAmountChange.Add("aaa", "123");
             offerModifyStockRequest.skuAmountChange = skuAmountChange;
             OfferModifyStockResponse offerModifyStockResponse = defaultAliClient.Execute(offerModifyStockRequest);
             Console.WriteLine(offerModifyStockRequest);
