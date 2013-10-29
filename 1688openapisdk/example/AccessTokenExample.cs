@@ -15,6 +15,8 @@ using _1688openapisdk.request.member;
 using _1688openapisdk.response.member;
 using _1688openapisdk.request.customer;
 using _1688openapisdk.response.customer;
+using _1688openapisdk.domain.product;
+using _1688openapisdk.domain;
 
 namespace _1688openapisdk.example
 {
@@ -98,6 +100,17 @@ namespace _1688openapisdk.example
             offerModifyStockRequest.skuAmountChange = skuAmountChange;
             OfferModifyStockResponse offerModifyStockResponse = defaultAliClient.Execute(offerModifyStockRequest);
             Console.WriteLine(offerModifyStockRequest);
+
+            ///offer.modify.increment 增量修改offer（该接口只支持价格和标题的增量修改！请慎用！）
+            OfferModifyIncrementRequest offerModifyIncrementRequest = new OfferModifyIncrementRequest();
+            offerModifyIncrementRequest.access_token = accessTokenResponse.accessToken;
+            OfferModifyIncrement offer = new OfferModifyIncrement();
+            offer.offerId = "1295193597";
+            offer.priceRanges = "60:10`70:9`80:8";
+            offer.subject = "c# sdk test modify title";
+            offerModifyIncrementRequest.offer = offer;
+            OfferModifyIncrementResponse offerModifyIncrementResponse = defaultAliClient.Execute(offerModifyIncrementRequest);
+            Console.WriteLine(offerModifyIncrementResponse);
 
             ///获取提供该服务的物流公司列表 e56.logistics.companies.get -- version: 1
             LogisticsCompaniesGetRequest logisticsCompaniesGetRequest = new LogisticsCompaniesGetRequest();

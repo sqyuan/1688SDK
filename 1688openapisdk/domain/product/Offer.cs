@@ -119,7 +119,7 @@ namespace _1688openapisdk.domain.product
         /// <summary>
         /// sku图片	"skuPics":{"3216":[{"\u767d\u8272":"http://img.china.alibaba.com/img/ibank/2013/242/222/926222242_648103749.jpg"},{"\u9ec4\u8272":"http://img.china.alibaba.com/img/ibank/2013/642/128/907821246_648103749.jpg"},{"\u9ed1\u8272":"http://img.china.alibaba.com/img/ibank/2013/988/206/888602889_648103749.jpg"}]}
         /// </summary>
-        public List<Dictionary<string, List<IDictionary<string,string>>> skuPics{get;set;}
+        public List<Dictionary<string, List<IDictionary<string,string>>>> skuPics{get;set;}
 
     }
 }

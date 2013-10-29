@@ -38,7 +38,7 @@ namespace _1688openapisdk.request.product
             }
         }
 
-        object IAliRequest<OfferExpireResponse>.GetReturnType()
+        object IAliRequest<OfferRepostResponse>.GetReturnType()
         {
             return typeof(List<OfferRepostResult>);
         }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using _1688openapisdk.response.product;
 using _1688openapisdk.domain.product;
+using _1688openapisdk.domain;
 
 namespace _1688openapisdk.request.product
 {
@@ -11,7 +12,7 @@ namespace _1688openapisdk.request.product
     /// </summary>
     public class OfferModifyIncrementRequest : IAliRequest<OfferModifyIncrementResponse>
     {
-        public Offer offer { get; set; }
+        public OfferModifyIncrement offer { get; set; }
 
         public string access_token { get; set; }
 

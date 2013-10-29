@@ -4,7 +4,7 @@ using System.Text;
 
 namespace _1688openapisdk.domain.product
 {
-    class OfferRepostResult
+    public class OfferRepostResult
     {
         public long offerId { get; set; }
 
