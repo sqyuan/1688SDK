@@ -1,10 +1,10 @@
-c:\users\weijian.zhongwj\documents\visual studio 2010\Projects\1688openapisdk\1688openapisdk\bin\Debug\1688openapisdk.exe.config
-c:\users\weijian.zhongwj\documents\visual studio 2010\Projects\1688openapisdk\1688openapisdk\obj\x86\Debug\ResolveAssemblyReference.cache
-c:\users\weijian.zhongwj\documents\visual studio 2010\Projects\1688openapisdk\1688openapisdk\bin\Debug\1688openapisdk.exe
-c:\users\weijian.zhongwj\documents\visual studio 2010\Projects\1688openapisdk\1688openapisdk\bin\Debug\1688openapisdk.pdb
-c:\users\weijian.zhongwj\documents\visual studio 2010\Projects\1688openapisdk\1688openapisdk\obj\x86\Debug\1688openapisdk.exe
-c:\users\weijian.zhongwj\documents\visual studio 2010\Projects\1688openapisdk\1688openapisdk\obj\x86\Debug\1688openapisdk.pdb
+C:\Users\weijian.zhongwj\documents\visual studio 2010\Projects\1688openapisdk\1688openapisdk\bin\Debug\1688openapisdk.pdb
 C:\Users\weijian.zhongwj\documents\visual studio 2010\Projects\1688openapisdk\1688openapisdk\bin\Debug\Jayrock.dll
 C:\Users\weijian.zhongwj\documents\visual studio 2010\Projects\1688openapisdk\1688openapisdk\bin\Debug\Jayrock.Json.dll
 C:\Users\weijian.zhongwj\documents\visual studio 2010\Projects\1688openapisdk\1688openapisdk\bin\Debug\Jayrock.pdb
 C:\Users\weijian.zhongwj\documents\visual studio 2010\Projects\1688openapisdk\1688openapisdk\bin\Debug\Jayrock.Json.pdb
+C:\Users\weijian.zhongwj\documents\visual studio 2010\Projects\1688openapisdk\1688openapisdk\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\weijian.zhongwj\documents\visual studio 2010\Projects\1688openapisdk\1688openapisdk\obj\x86\Debug\1688openapisdk.pdb
+C:\Users\weijian.zhongwj\documents\visual studio 2010\Projects\1688openapisdk\1688openapisdk\bin\Debug\1688openapisdk.exe.config
+C:\Users\weijian.zhongwj\documents\visual studio 2010\Projects\1688openapisdk\1688openapisdk\bin\Debug\1688openapisdk.exe
+C:\Users\weijian.zhongwj\documents\visual studio 2010\Projects\1688openapisdk\1688openapisdk\obj\x86\Debug\1688openapisdk.exe

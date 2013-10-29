@@ -8,7 +8,7 @@ namespace _1688openapisdk.request
     /// <summary>
     /// AccessTokenRequest
     /// </summary>
-    class AccessTokenRequest : IAliRequest<AccessTokenResponse>
+    public class AccessTokenRequest : IAliRequest<AccessTokenResponse>
     {
         public string account { get; set; }
 

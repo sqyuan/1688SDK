@@ -9,7 +9,7 @@ namespace _1688openapisdk.request
     /// <summary>
     /// 获取物流公司列表
     /// </summary>
-    class LogisticsCompaniesGetRequest : IAliRequest<LogisticsCompaniesGetResponse>
+    public class LogisticsCompaniesGetRequest : IAliRequest<LogisticsCompaniesGetResponse>
     {
         /// <summary>
         /// 调用者的中文站的memberId

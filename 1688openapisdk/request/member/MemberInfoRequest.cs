@@ -9,7 +9,7 @@ namespace _1688openapisdk.request
     /// <summary>
     /// 获取单个会员信息
     /// </summary>
-    class MemberInfoRequest:IAliRequest<MemberInfoResponse>
+    public class MemberInfoRequest:IAliRequest<MemberInfoResponse>
     {
         /// <summary>
         /// 会员ID

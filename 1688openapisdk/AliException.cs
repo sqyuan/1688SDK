@@ -4,7 +4,7 @@ using System.Text;
 
 namespace _1688openapisdk
 {
-    class AliException : Exception
+    public class AliException : Exception
     {
         private string errorCode;
         private string errorMsg;

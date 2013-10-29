@@ -8,7 +8,7 @@ namespace _1688openapisdk
     /// <summary>
     /// 日志打点的简单实现。
     /// </summary>
-    class DefaultAliLogger:IAliLogger
+    public class DefaultAliLogger:IAliLogger
     {
         public const string LOG_FILE_NAME = "alisdk.log";
         public const string DATETIME_FORMAT = "yyyy-MM-dd HH:mm:ss";

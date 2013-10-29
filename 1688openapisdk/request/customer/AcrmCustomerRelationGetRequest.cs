@@ -9,7 +9,7 @@ namespace _1688openapisdk.request.customer
     /// <summary>
     /// 本接口实现阿里巴巴中文站登录会员，根据等级获取当前卖家的会员信息
     /// </summary>
-    class AcrmCustomerRelationGetRequest : IAliRequest<AcrmCustomerRelationGetResponse>
+    public class AcrmCustomerRelationGetRequest : IAliRequest<AcrmCustomerRelationGetResponse>
     {
         /// <summary>
         /// 中文站memberid

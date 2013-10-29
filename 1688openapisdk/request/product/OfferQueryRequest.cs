@@ -9,7 +9,7 @@ namespace _1688openapisdk.request
     /// <summary>
     /// 获取单个产品信息
     /// </summary>
-    class OfferQueryRequest : IAliRequest<OfferResponse>
+    public class OfferQueryRequest : IAliRequest<OfferResponse>
     {
         /// <summary>
         /// 产品ID

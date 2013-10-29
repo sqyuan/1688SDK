@@ -6,7 +6,7 @@ using Jayrock.Json;
 
 namespace _1688openapisdk
 {
-    class Program
+    public class Program
     {
         static void testMain(string[] args)
         //static void Main(string[] args)
