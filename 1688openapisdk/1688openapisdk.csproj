@@ -76,8 +76,11 @@
     <Compile Include="domain\order\Logistics.cs" />
     <Compile Include="domain\order\OrderEntry.cs" />
     <Compile Include="domain\order\OrderInfo.cs" />
+    <Compile Include="domain\order\OrderInvoiceModel.cs" />
+    <Compile Include="domain\order\OrderMemoModel.cs" />
     <Compile Include="domain\order\TradeRateParam.cs" />
     <Compile Include="domain\order\WeightTariff.cs" />
+    <Compile Include="domain\order\OrderModel.cs" />
     <Compile Include="domain\photoalbum\Album.cs" />
     <Compile Include="domain\photoalbum\AlbumCreateResult.cs" />
     <Compile Include="domain\photoalbum\AlbumDeleteResult.cs" />
@@ -117,6 +120,8 @@
     <Compile Include="request\customer\AcrmGroupsGetRequest.cs" />
     <Compile Include="request\member\CompanyGetRequest.cs" />
     <Compile Include="request\member\CreditInfoGetRequest.cs" />
+    <Compile Include="request\order\NewTradeOrderDetailGetRequest.cs" />
+    <Compile Include="request\order\OrderListInfoRequest.cs" />
     <Compile Include="request\product\OfferCanModifyGetRequest.cs" />
     <Compile Include="request\product\OfferDeleteRequest.cs" />
     <Compile Include="request\product\OfferExpireRequest.cs" />
@@ -178,11 +183,13 @@
     <Compile Include="response\member\CreditInfoGetResponse.cs" />
     <Compile Include="response\member\MemberInfoResponse.cs" />
     <Compile Include="response\order\AreaCodeGetResponse.cs" />
+    <Compile Include="response\order\OrderListInfoResponse.cs" />
     <Compile Include="response\order\TradeFreightSendGoodsAddressListGetResponse.cs" />
     <Compile Include="response\order\TradeFreightTemplateListGetResponse.cs" />
     <Compile Include="response\order\TradeOrderBatchRateResponse.cs" />
     <Compile Include="response\order\TradeOrderDetailGetResponse.cs" />
     <Compile Include="response\order\TradeOrderListGetResponse.cs" />
+    <Compile Include="response\order\NewTradeOrderDetailGetResponse.cs" />
     <Compile Include="response\photoalbum\IbankAlbumCreateResponse.cs" />
     <Compile Include="response\photoalbum\IbankAlbumDeleteResponse.cs" />
     <Compile Include="response\photoalbum\IbankAlbumGetResponse.cs" />

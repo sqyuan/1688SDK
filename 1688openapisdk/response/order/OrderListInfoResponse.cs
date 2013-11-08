@@ -5,11 +5,11 @@ using _1688openapisdk.domain.order;
 
 namespace _1688openapisdk.response.order
 {
-    public class TradeOrderDetailGetResponse:AliResponse
+    public class OrderListInfoResponse:AliResponse
     {
         /// <summary>
         /// 订单结果集
         /// </summary>
-        public OrderInfo orderModel { get; set; }
+        public OrderInfo[] toReturn { get; set; }
     }
 }

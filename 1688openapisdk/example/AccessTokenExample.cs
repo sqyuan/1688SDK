@@ -22,8 +22,8 @@ namespace _1688openapisdk.example
 {
     class AccessTokenExample
     {
-        static void mytest()
-        //static void Main(string[] args)
+        //static void mytest()
+        static void Main(string[] args)
         {
             ///获取accesstoken示例，注意有效期
             DefaultAliClient defaultAliClient = new DefaultAliClient("https://gw.open.1688.com/openapi/", "1002071", "WsRIC:O6CF2");
@@ -267,6 +267,22 @@ namespace _1688openapisdk.example
             AcrmCustomerRelationGetRequest.pageSize = 20;
             AcrmCustomerRelationGetResponse AcrmCustomerRelationGetResponse = defaultAliClient.Execute(AcrmCustomerRelationGetRequest);
             Console.WriteLine(AcrmCustomerRelationGetResponse);
+
+            ///新接口查询当前会话会员的交易订单列表
+            OrderListInfoRequest orderListInfoRequest = new OrderListInfoRequest();
+            orderListInfoRequest.access_token = accessTokenResponse.accessToken;
+            orderListInfoRequest.sellerMemberId = "testfree";
+            orderListInfoRequest.pageSize = 20;
+            orderListInfoRequest.page = 1;
+            OrderListInfoResponse OrderListInfoResponse = defaultAliClient.Execute(orderListInfoRequest);
+            Console.WriteLine(OrderListInfoResponse);
+
+            ///新本接口查询当前会话会员的交易订单详情
+            NewTradeOrderDetailGetRequest newTradeOrderDetailGetRequest = new NewTradeOrderDetailGetRequest();
+            newTradeOrderDetailGetRequest.access_token = accessTokenResponse.accessToken;
+            newTradeOrderDetailGetRequest.id = 440136255012834;
+            NewTradeOrderDetailGetResponse newtradeOrderDetailGetResponse = defaultAliClient.Execute(newTradeOrderDetailGetRequest);
+            Console.WriteLine(newtradeOrderDetailGetResponse);
             
         }
     }

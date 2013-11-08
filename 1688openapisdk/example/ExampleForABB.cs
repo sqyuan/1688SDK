@@ -16,7 +16,8 @@ namespace _1688openapisdk.example
     //ABB使用接口示例
     public class ExampleForABB
     {
-        static void Main(string[] args)
+        static void testMain(string[] args)
+        //static void Main(string[] args)
         {
             ///获取accesstoken示例，注意有效期
             DefaultAliClient defaultAliClient = new DefaultAliClient("https://gw.open.1688.com/openapi/", "1002071", "WsRIC:O6CF2");
@@ -120,6 +121,8 @@ namespace _1688openapisdk.example
             AcrmCustomerTradeGetRequest acrmCustomerTradeGetRequest = new AcrmCustomerTradeGetRequest();
             acrmCustomerTradeGetRequest.memberId = "testfree";
             acrmCustomerTradeGetRequest.access_token = accessTokenResponse.accessToken;
+            acrmCustomerTradeGetRequest.pageSize = 100;
+            acrmCustomerTradeGetRequest.pageNum = 2;
             AcrmCustomerTradeGetResponse acrmCustomerTradeGetResponse = defaultAliClient.Execute(acrmCustomerTradeGetRequest);
             Console.WriteLine(acrmCustomerTradeGetResponse);
 
