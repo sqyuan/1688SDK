@@ -20,10 +20,10 @@ namespace _1688openapisdk.example
         //static void Main(string[] args)
         {
             ///获取accesstoken示例，注意有效期
-            DefaultAliClient defaultAliClient = new DefaultAliClient("https://gw.open.1688.com/openapi/", "appkey", "appsecret");
+            DefaultAliClient defaultAliClient = new DefaultAliClient("https://gw.open.1688.com/openapi/", "1002071", "WsRIC:O6CF2");
             AccessTokenRequest accessTokenRequest = new AccessTokenRequest();
-            accessTokenRequest.account = "username";
-            accessTokenRequest.password = "password";
+            accessTokenRequest.account = "testfree66";
+            accessTokenRequest.password = "1111112";
             AccessTokenResponse accessTokenResponse = defaultAliClient.Execute(accessTokenRequest);
             Jayrock.Json.JsonTextWriter writer = new Jayrock.Json.JsonTextWriter();
             Jayrock.Json.Conversion.JsonConvert.Export(accessTokenResponse, writer);

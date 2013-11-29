@@ -25,7 +25,7 @@ namespace _1688openapisdk.example
         //static void mytest()
         static void Main(string[] args)
         {
-            ///获取accesstoken示例，注意有效期
+            ///获取accesstoken示例，注意有效期 ，过期之后如何更新token？
             DefaultAliClient defaultAliClient = new DefaultAliClient("https://gw.open.1688.com/openapi/", "1002071", "WsRIC:O6CF2");
             AccessTokenRequest accessTokenRequest = new AccessTokenRequest();
             accessTokenRequest.account = "testfree66";
