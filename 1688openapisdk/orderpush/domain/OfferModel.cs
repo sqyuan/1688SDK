@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using _1688openapisdk.domain;
+using System.Xml.Serialization;
 
 namespace _1688openapisdk.orderpush.domain
 {
@@ -141,7 +142,8 @@ namespace _1688openapisdk.orderpush.domain
         /// <summary>
         /// SKU规格属性信息{fid:value}当有多个值时用"#"联接
         /// </summary>
-        public IDictionary<Object,Object> skuArray { get; set; }
+        [XmlIgnore]
+        public Dictionary<Object,Object> skuArray { get; set; }
         /// <summary>
         /// 创建日期
         /// </summary>

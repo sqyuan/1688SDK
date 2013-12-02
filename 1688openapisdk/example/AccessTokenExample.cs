@@ -22,8 +22,8 @@ namespace _1688openapisdk.example
 {
     class AccessTokenExample
     {
-        //static void mytest()
-        static void Main(string[] args)
+        static void mytest()
+        //static void Main(string[] args)
         {
             ///获取accesstoken示例，注意有效期 ，过期之后如何更新token？
             DefaultAliClient defaultAliClient = new DefaultAliClient("https://gw.open.1688.com/openapi/", "1002071", "WsRIC:O6CF2");
@@ -108,8 +108,8 @@ namespace _1688openapisdk.example
             OfferModifyIncrementRequest offerModifyIncrementRequest = new OfferModifyIncrementRequest();
             offerModifyIncrementRequest.access_token = accessTokenResponse.accessToken;
             OfferModifyIncrement offer = new OfferModifyIncrement();
-            offer.offerId = "1295193597";
-            offer.priceRanges = "60:10`70:9`80:8";
+            offer.offerId = "1294434695";
+            offer.priceRanges = "60:10`70:9`80:313.19";
             offer.subject = "c# sdk test modify title";
             offerModifyIncrementRequest.offer = offer;
             OfferModifyIncrementResponse offerModifyIncrementResponse = defaultAliClient.Execute(offerModifyIncrementRequest);
