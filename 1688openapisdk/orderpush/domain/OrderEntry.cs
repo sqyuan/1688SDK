@@ -52,7 +52,7 @@ namespace _1688openapisdk.orderpush.domain
         /// <summary>
         /// 产品图片/快照图片
         /// </summary>
-        public OfferSnapshotImageUrl[] offerSnapshotImageUrlList{get;set;}
+        public OfferSnapshotImageUrlList offerSnapshotImageUrlList { get; set; }
         /// <summary>
         /// 退款单ID
         /// </summary>

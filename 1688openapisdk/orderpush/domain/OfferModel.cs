@@ -30,7 +30,7 @@ namespace _1688openapisdk.orderpush.domain
         /// <summary>
         /// 贸易类型。1：产品，2：加工，3：代理，4：合作，5：商务服务
         /// </summary>
-        public int tradeType{get;set;}
+        public String tradeType{get;set;}
         /// <summary>
         /// 所属叶子类目ID
         /// </summary>
@@ -59,12 +59,12 @@ namespace _1688openapisdk.orderpush.domain
         /// <summary>
         /// 商品图片列表
         /// </summary>
-        public OfferImageInfo[] imageList { get; set; }
+        public ImageList imageList { get; set; }
 
         /// <summary>
         /// 商品属性信息
         /// </summary>
-        public ProductFeatureInfo[] productFeatureList { get; set; }
+        public ProductFeatureList productFeatureList { get; set; }
 
         /// <summary>
         /// 是否支持网上交易。true：支持网上订购；false：不支持网上订购
@@ -109,7 +109,7 @@ namespace _1688openapisdk.orderpush.domain
         /// <summary>
         /// 价格区间
         /// </summary>
-        public PriceRanges[] priceRanges { get; set; }
+        public PriceRangeList priceRangeList { get; set; }
         /// <summary>
         /// 有效期(单位：天)
         /// </summary>

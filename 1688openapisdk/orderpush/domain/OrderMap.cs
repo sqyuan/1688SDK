@@ -13,7 +13,7 @@ namespace _1688openapisdk.orderpush.domain
         /// <summary>
         /// 支付宝交易号
         /// </summary>
-        public long alipayTradeId{get;set;}
+        public string alipayTradeId{get;set;}
         /// <summary>
         /// 卖家支付宝ID
         /// </summary>
@@ -157,7 +157,7 @@ namespace _1688openapisdk.orderpush.domain
         /// <summary>
         /// 子订单列表
         /// </summary>
-        public OrderEntry[] orderEntryList { get; set; }
+        public OrderEntryList orderEntryList { get; set; }
 
         /// <summary>
         /// 物流单列表
