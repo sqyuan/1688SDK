@@ -174,7 +174,7 @@ namespace _1688openapisdk
                             JsonObject jsonObj = new JsonObject();
                             jsonObj.Import(new JsonTextReader(new StringReader(body)));
                             JsonObject responseObj = jsonObj["result"] as JsonObject;
-                            if (responseObj == null)
+                            if (responseObj == null || responseObj["success"] == null)
                             {
                                 rsp = (T)Jayrock.Json.Conversion.JsonConvert.Import(typeof(T), body);
                                 rsp.body = body;

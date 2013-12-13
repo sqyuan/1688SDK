@@ -65,6 +65,10 @@
     <Compile Include="domain\category\StandardSpuAttrValues.cs" />
     <Compile Include="domain\customer\GroupsTab.cs" />
     <Compile Include="domain\customer\Relation.cs" />
+    <Compile Include="domain\logistics\DeliveryRateDescn.cs" />
+    <Compile Include="domain\logistics\DeliveryTemplateDescn.cs" />
+    <Compile Include="domain\logistics\SubTemplateDescn.cs" />
+    <Compile Include="domain\logistics\DeliveryTemplateBaseDescn.cs" />
     <Compile Include="domain\member\AddressLocation.cs" />
     <Compile Include="domain\logistics\LogisticsOrder.cs" />
     <Compile Include="domain\logistics\LogisticsStep.cs" />
@@ -137,6 +141,8 @@
     <Compile Include="request\customer\AcrmCustomerRelationGetRequest.cs" />
     <Compile Include="request\customer\AcrmCustomerTradeGetRequest.cs" />
     <Compile Include="request\customer\AcrmGroupsGetRequest.cs" />
+    <Compile Include="request\logistics\E56DeliveryTemplateGetRequest.cs" />
+    <Compile Include="request\logistics\E56DeliveryTemplateListRequest.cs" />
     <Compile Include="request\member\CompanyGetRequest.cs" />
     <Compile Include="request\member\CreditInfoGetRequest.cs" />
     <Compile Include="request\order\NewTradeOrderDetailGetRequest.cs" />
@@ -150,6 +156,10 @@
     <Compile Include="request\product\OfferRepostRequest.cs" />
     <Compile Include="request\product\OfferSearchRequest.cs" />
     <Compile Include="request\product\OffersModifyRequest.cs" />
+    <Compile Include="request\search\SearchCategoryCheatingRequest.cs" />
+    <Compile Include="request\search\SearchPropertiesAbuseRequest.cs" />
+    <Compile Include="request\search\SearchTitlePropertiesInconsistentRequest.cs" />
+    <Compile Include="request\search\SearchTitleStuffingReqeust.cs" />
     <Compile Include="response\category\CategoryGetCatePathResponse.cs" />
     <Compile Include="request\category\CategoryGetCatListByParentIdRequest.cs" />
     <Compile Include="request\category\CategoryGetPostCatListRequest.cs" />
@@ -193,6 +203,8 @@
     <Compile Include="response\customer\AcrmCustomerRelationGetResponse.cs" />
     <Compile Include="response\customer\AcrmCustomerTradeGetResponse.cs" />
     <Compile Include="response\customer\AcrmGroupsGetResponse.cs" />
+    <Compile Include="response\logistics\E56DeliveryTemplateGetResponse.cs" />
+    <Compile Include="response\logistics\E56DeliveryTemplateListResponse.cs" />
     <Compile Include="response\logistics\LogisticsCompaniesGetResponse.cs" />
     <Compile Include="response\logistics\LogisticsDummySendResponse.cs" />
     <Compile Include="response\logistics\LogisticsOfflineSendResponse.cs" />
@@ -232,6 +244,10 @@
     <Compile Include="response\product\OfferSearchResponse.cs" />
     <Compile Include="response\product\OffersModifyResponse.cs" />
     <Compile Include="response\product\PublishOfferListResponse.cs" />
+    <Compile Include="response\search\SearchCategoryCheatingResponse.cs" />
+    <Compile Include="response\search\SearchPropertiesAbuseResponse.cs" />
+    <Compile Include="response\search\SearchTitlePropertiesInconsistentResponse.cs" />
+    <Compile Include="response\search\SearchTitleStuffingResponse.cs" />
     <Compile Include="util\StringUtil.cs" />
     <Compile Include="util\WebUtils.cs" />
     <Compile Include="IAliClient.cs" />

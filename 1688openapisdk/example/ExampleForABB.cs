@@ -67,21 +67,21 @@ namespace _1688openapisdk.example
             ///查询单个产品信息 offer.get -- version: 1
             OfferQueryRequest offerQueryRequest = new OfferQueryRequest();
             offerQueryRequest.access_token = accessTokenResponse.accessToken;
-            offerQueryRequest.offerId = 1224610587;
-            offerQueryRequest.returnFields = new string[] { "offerId", "subject", "productFeatureList", "details", "memberId", "postCategryId", "saledCount", "amount", "amountOnSale", "priceRanges", "unit", "gmtModified", "imageList" };
+            offerQueryRequest.offerId = 36379282867;
+            offerQueryRequest.returnFields = new string[] { "skuList", "offerId", "subject", "productFeatureList", "details", "memberId", "postCategryId", "saledCount", "amount", "amountOnSale", "priceRanges", "unit", "gmtModified", "imageList" };
             OfferResponse offerResponse = defaultAliClient.Execute(offerQueryRequest);
             Console.WriteLine(offerResponse.toReturn.ToString());
 
             ///增量修改产品库存 offer.modify.stock -- version: 1
             OfferModifyStockRequest offerModifyStockRequest = new OfferModifyStockRequest();
-            offerModifyStockRequest.offerId = 1295193597;//产品id
-            offerModifyStockRequest.offerAmountChange = 700; //+表示增加，负表示减少
+            offerModifyStockRequest.offerId = 36379282867;//产品id
+            offerModifyStockRequest.offerAmountChange = 1; //+表示增加，负表示减少
             offerModifyStockRequest.access_token = accessTokenResponse.accessToken;
             Dictionary<string, string> skuAmountChange = new Dictionary<string, string>();
-            //skuAmountChange.Add("aaa", "123");//如果是sku 产品，则需要修改sku的价格
+            skuAmountChange.Add("8a83875664478078358187ed938f4bab", "1");//如果是sku 产品，则需要修改sku的库存
             offerModifyStockRequest.skuAmountChange = skuAmountChange;
             OfferModifyStockResponse offerModifyStockResponse = defaultAliClient.Execute(offerModifyStockRequest);
-            Console.WriteLine(offerModifyStockRequest);
+            Console.WriteLine(offerModifyStockResponse);
 
             ///offer.modify.increment 增量修改offer（该接口只支持价格和标题的增量修改！请慎用！）
             OfferModifyIncrementRequest offerModifyIncrementRequest = new OfferModifyIncrementRequest();

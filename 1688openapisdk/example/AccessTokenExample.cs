@@ -17,13 +17,17 @@ using _1688openapisdk.request.customer;
 using _1688openapisdk.response.customer;
 using _1688openapisdk.domain.product;
 using _1688openapisdk.domain;
+using _1688openapisdk.request.logistics;
+using _1688openapisdk.response.logistics;
+using _1688openapisdk.request.search;
+using _1688openapisdk.response.search;
 
 namespace _1688openapisdk.example
 {
     class AccessTokenExample
     {
-        static void mytest()
-        //static void Main(string[] args)
+        //static void mytest()
+        static void Main(string[] args)
         {
             ///获取accesstoken示例，注意有效期 ，过期之后如何更新token？
             DefaultAliClient defaultAliClient = new DefaultAliClient("https://gw.open.1688.com/openapi/", "1002071", "WsRIC:O6CF2");
@@ -95,14 +99,14 @@ namespace _1688openapisdk.example
 
             ///增量修改产品库存 offer.modify.stock -- version: 1
             OfferModifyStockRequest offerModifyStockRequest = new OfferModifyStockRequest();
-            offerModifyStockRequest.offerId = 1295193597;
-            offerModifyStockRequest.offerAmountChange = 700;
+            offerModifyStockRequest.offerId = 36379282867;//产品id
+            offerModifyStockRequest.offerAmountChange = 1; //+表示增加，负表示减少
             offerModifyStockRequest.access_token = accessTokenResponse.accessToken;
             Dictionary<string, string> skuAmountChange = new Dictionary<string, string>();
-            //skuAmountChange.Add("aaa", "123");
+            skuAmountChange.Add("8a83875664478078358187ed938f4bab", "1");//如果是sku 产品，则需要修改sku的库存
             offerModifyStockRequest.skuAmountChange = skuAmountChange;
             OfferModifyStockResponse offerModifyStockResponse = defaultAliClient.Execute(offerModifyStockRequest);
-            Console.WriteLine(offerModifyStockRequest);
+            Console.WriteLine(offerModifyStockResponse);
 
             ///offer.modify.increment 增量修改offer（该接口只支持价格和标题的增量修改！请慎用！）
             OfferModifyIncrementRequest offerModifyIncrementRequest = new OfferModifyIncrementRequest();
@@ -114,6 +118,19 @@ namespace _1688openapisdk.example
             offerModifyIncrementRequest.offer = offer;
             OfferModifyIncrementResponse offerModifyIncrementResponse = defaultAliClient.Execute(offerModifyIncrementRequest);
             Console.WriteLine(offerModifyIncrementResponse);
+
+            //用户运费模板列表描述查询
+            E56DeliveryTemplateListRequest e56DeliveryTemplateListRequest = new E56DeliveryTemplateListRequest();
+            e56DeliveryTemplateListRequest.memberId = "testfree";
+            e56DeliveryTemplateListRequest.access_token = accessTokenResponse.accessToken;
+            E56DeliveryTemplateListResponse e56DeliveryTemplateListResponse = defaultAliClient.Execute(e56DeliveryTemplateListRequest);
+            Console.WriteLine(e56DeliveryTemplateListResponse);
+            E56DeliveryTemplateGetRequest e56DeliveryTemplateGetRequest = new E56DeliveryTemplateGetRequest();
+            e56DeliveryTemplateGetRequest.memberId = "testfree";
+            e56DeliveryTemplateGetRequest.access_token = accessTokenResponse.accessToken;
+            e56DeliveryTemplateGetRequest.templateId = "1069818";
+            E56DeliveryTemplateGetResponse e56DeliveryTemplateGetResponse = defaultAliClient.Execute(e56DeliveryTemplateGetRequest);
+            Console.WriteLine(e56DeliveryTemplateGetResponse);
 
             ///获取提供该服务的物流公司列表 e56.logistics.companies.get -- version: 1
             LogisticsCompaniesGetRequest logisticsCompaniesGetRequest = new LogisticsCompaniesGetRequest();
@@ -283,7 +300,34 @@ namespace _1688openapisdk.example
             newTradeOrderDetailGetRequest.id = 440136255012834;
             NewTradeOrderDetailGetResponse newtradeOrderDetailGetResponse = defaultAliClient.Execute(newTradeOrderDetailGetRequest);
             Console.WriteLine(newtradeOrderDetailGetResponse);
-            
+
+            ///用户在发布offer时候，需要选择对应的发布类目，类目作弊就是用来检测选择的类目跟发布的offer信息是否匹配
+            SearchCategoryCheatingRequest searchCategoryCheatingRequest = new SearchCategoryCheatingRequest();
+            searchCategoryCheatingRequest.userid = "testfree";
+            searchCategoryCheatingRequest.title = "喷泉水景是单价的offer22";
+            searchCategoryCheatingRequest.catid = "30";
+            SearchCategoryCheatingResponse searchCategoryCheatingResponse = defaultAliClient.Execute(searchCategoryCheatingRequest);
+            Console.WriteLine(searchCategoryCheatingResponse.body);
+
+            ///用来判断，用户标题和属性中填写的信息是否一致，是否存在冲突的关键属性
+            SearchTitlePropertiesInconsistentRequest searchTitlePropertiesInconsistentRequest = new SearchTitlePropertiesInconsistentRequest();
+            searchTitlePropertiesInconsistentRequest.catid = "1046737";
+            searchTitlePropertiesInconsistentRequest.title = "喷泉水景是单价的offer22";
+            searchTitlePropertiesInconsistentRequest.brief = "产品类别:洗衣液 品牌:Tide/汰渍";
+            SearchTitlePropertiesInconsistentResponse searchTitlePropertiesInconsistentResponse = defaultAliClient.Execute(searchTitlePropertiesInconsistentRequest);
+            Console.WriteLine(searchTitlePropertiesInconsistentResponse.body);
+
+            ///判断用户填写的属性是否存在滥用，比如属性值多个重复使用，属性值过长，以及属性值无意义等。
+            SearchPropertiesAbuseRequest searchPropertiesAbuseRequest = new SearchPropertiesAbuseRequest();
+            searchPropertiesAbuseRequest.catid = "1046737";
+            searchPropertiesAbuseRequest.brief = "产品类别:洗衣液 品牌:Tide/汰渍 货号:TZ-200 类型:浓缩型 适用范围:所有衣物 香型:自然 净含量:200-350g/ml 产地:中国 箱装数量:30";
+            SearchPropertiesAbuseResponse searchPropertiesAbuseResponse = defaultAliClient.Execute(searchPropertiesAbuseRequest);
+            Console.WriteLine(searchPropertiesAbuseResponse.body);
+
+            SearchTitleStuffingReqeust searchTitleStuffingReqeust = new SearchTitleStuffingReqeust();
+            searchTitleStuffingReqeust.query = "ABB 品牌 品牌ABB口罩 防护口罩";
+            SearchTitleStuffingResponse SearchTitleStuffingResponse = defaultAliClient.Execute(searchTitleStuffingReqeust);
+            Console.WriteLine(SearchTitleStuffingResponse.body);
         }
     }
 }
