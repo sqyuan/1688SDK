@@ -92,8 +92,8 @@ namespace _1688openapisdk.example
             ///查询单个产品信息 offer.get -- version: 1
             OfferQueryRequest offerQueryRequest = new OfferQueryRequest();
             offerQueryRequest.access_token = accessTokenResponse.accessToken;
-            offerQueryRequest.offerId = 1224610587;
-            offerQueryRequest.returnFields = new string[] { "offerId", "subject", "productFeatureList", "details", "memberId", "postCategryId", "saledCount", "amount", "amountOnSale", "priceRanges", "unit", "gmtModified", "imageList" };
+            offerQueryRequest.offerId = 36379282867;
+            offerQueryRequest.returnFields = new string[] { "skuArray", "offerId", "subject", "productFeatureList", "details", "memberId", "postCategryId", "saledCount", "amount", "amountOnSale", "priceRanges", "unit", "gmtModified", "imageList" };
             OfferResponse offerResponse = defaultAliClient.Execute(offerQueryRequest);
             Console.WriteLine(offerResponse.toReturn.ToString());
 

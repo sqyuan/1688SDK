@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using _1688openapisdk.domain.product;
 
 namespace _1688openapisdk.domain
 {
@@ -175,7 +176,7 @@ namespace _1688openapisdk.domain
         /// <summary>
         /// SKU规格属性信息{fid:value}当有多个值时用"#"联接
         /// </summary>
-        public Dictionary<Object, Object> skuArray { get; set; }
+        public SkuInfo[] skuArray { get; set; }
 
         /// <summary>
         /// 创建日期

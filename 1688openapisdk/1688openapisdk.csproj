@@ -107,6 +107,8 @@
     <Compile Include="domain\logistics\SendGood.cs" />
     <Compile Include="domain\logistics\SimpleLogisticsCompany.cs" />
     <Compile Include="domain\logistics\TraceNode.cs" />
+    <Compile Include="domain\product\SkuChild.cs" />
+    <Compile Include="domain\product\SkuInfo.cs" />
     <Compile Include="example\AccessTokenExample.cs" />
     <Compile Include="example\Config.cs" />
     <Compile Include="DefaultAliClient.cs" />
