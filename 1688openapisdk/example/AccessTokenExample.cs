@@ -32,8 +32,8 @@ namespace _1688openapisdk.example
             ///获取accesstoken示例，注意有效期 ，过期之后如何更新token？
             DefaultAliClient defaultAliClient = new DefaultAliClient("https://gw.open.1688.com/openapi/", "1002071", "WsRIC:O6CF2");
             AccessTokenRequest accessTokenRequest = new AccessTokenRequest();
-            accessTokenRequest.account = "testfree66";
-            accessTokenRequest.password = "1111112";
+            accessTokenRequest.account = "testfree66"; //你的1688 memberId
+            accessTokenRequest.password = "1111112"; //你的密码
             AccessTokenResponse accessTokenResponse = defaultAliClient.Execute(accessTokenRequest);
             Jayrock.Json.JsonTextWriter writer = new Jayrock.Json.JsonTextWriter();
             Jayrock.Json.Conversion.JsonConvert.Export(accessTokenResponse, writer);
@@ -91,8 +91,8 @@ namespace _1688openapisdk.example
 
             ///查询单个产品信息 offer.get -- version: 1
             OfferQueryRequest offerQueryRequest = new OfferQueryRequest();
-            offerQueryRequest.access_token = accessTokenResponse.accessToken;
-            offerQueryRequest.offerId = 36379282867;
+            //offerQueryRequest.access_token = accessTokenResponse.accessToken;
+            offerQueryRequest.offerId = 35687805905;
             offerQueryRequest.returnFields = new string[] { "skuArray", "offerId", "subject", "productFeatureList", "details", "memberId", "postCategryId", "saledCount", "amount", "amountOnSale", "priceRanges", "unit", "gmtModified", "imageList" };
             OfferResponse offerResponse = defaultAliClient.Execute(offerQueryRequest);
             Console.WriteLine(offerResponse.toReturn.ToString());
@@ -118,6 +118,26 @@ namespace _1688openapisdk.example
             offerModifyIncrementRequest.offer = offer;
             OfferModifyIncrementResponse offerModifyIncrementResponse = defaultAliClient.Execute(offerModifyIncrementRequest);
             Console.WriteLine(offerModifyIncrementResponse);
+
+            ///offer.modify.increment 增量修改offer SKU价格（该接口只支持价格和标题的增量修改！请慎用！）
+            OfferModifyIncrementRequest offerModifyIncrementRequest1 = new OfferModifyIncrementRequest();
+            offerModifyIncrementRequest1.access_token = accessTokenResponse.accessToken;
+            OfferModifyIncrement offer1 = new OfferModifyIncrement();
+            offer1.offerId = "35687805905";
+            OfferSkuParam[] offerSkuParam = new OfferSkuParam[1];
+            OfferSkuParam OfferSkuParam1 = new OfferSkuParam();
+            OfferSkuParam1.specAttributes = new Dictionary<string, string>();
+            OfferSkuParam1.specAttributes.Add("450", "XXS");
+            OfferSkuParam1.specAttributes.Add("3216", "黑色");
+            OfferSkuParam1.amountOnSale = 100;
+            OfferSkuParam1.price = 2000;
+            OfferSkuParam1.retailPrice = 3000;
+            OfferSkuParam1.cargoNumber = "11";
+            offerSkuParam[0] = OfferSkuParam1;
+            offer1.skuList = offerSkuParam;
+            offerModifyIncrementRequest1.offer = offer1;
+   ///         OfferModifyIncrementResponse offerModifyIncrementResponse1 = defaultAliClient.Execute(offerModifyIncrementRequest1);
+   ///         Console.WriteLine(offerModifyIncrementResponse1);
 
             //用户运费模板列表描述查询
             E56DeliveryTemplateListRequest e56DeliveryTemplateListRequest = new E56DeliveryTemplateListRequest();

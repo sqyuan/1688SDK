@@ -22,8 +22,8 @@ namespace _1688openapisdk.example
             ///获取accesstoken示例，注意有效期
             DefaultAliClient defaultAliClient = new DefaultAliClient("https://gw.open.1688.com/openapi/", "1002071", "WsRIC:O6CF2");
             AccessTokenRequest accessTokenRequest = new AccessTokenRequest();
-            accessTokenRequest.account = "testfree66";
-            accessTokenRequest.password = "1111112";
+            accessTokenRequest.account = "testfree66"; //你的1688 memberId
+            accessTokenRequest.password = "1111112"; //你的密码
             AccessTokenResponse accessTokenResponse = defaultAliClient.Execute(accessTokenRequest);
             Jayrock.Json.JsonTextWriter writer = new Jayrock.Json.JsonTextWriter();
             Jayrock.Json.Conversion.JsonConvert.Export(accessTokenResponse, writer);
@@ -66,7 +66,7 @@ namespace _1688openapisdk.example
 
             ///查询单个产品信息 offer.get -- version: 1
             OfferQueryRequest offerQueryRequest = new OfferQueryRequest();
-            offerQueryRequest.access_token = accessTokenResponse.accessToken;
+           // offerQueryRequest.access_token = accessTokenResponse.accessToken;
             offerQueryRequest.offerId = 36379282867;
             offerQueryRequest.returnFields = new string[] { "skuList", "offerId", "subject", "productFeatureList", "details", "memberId", "postCategryId", "saledCount", "amount", "amountOnSale", "priceRanges", "unit", "gmtModified", "imageList" };
             OfferResponse offerResponse = defaultAliClient.Execute(offerQueryRequest);

@@ -20,7 +20,7 @@ namespace _1688openapisdk.request
         /// </summary>
         public string[] returnFields { get; set; }
 
-        public string access_token { get; set; }
+        //public string access_token { get; set; }
 
 
         string IAliRequest<OfferResponse>.GetApiName()
@@ -33,15 +33,15 @@ namespace _1688openapisdk.request
             Dictionary<string, string> parameters = new Dictionary<string, string>();
             parameters.Add("offerId", this.offerId.ToString());
             parameters.Add("returnFields", String.Join(",", this.returnFields));
-            parameters.Add("access_token", this.access_token);
+            //parameters.Add("access_token", this.access_token);
             return parameters;
         }
 
         void IAliRequest<OfferResponse>.Validate()
         {
-            if (this.offerId == null || this.returnFields == null || this.access_token == null)
+            if (this.offerId == null || this.returnFields == null)
             {
-                throw new AliException("offerId , returnFields ,access_token   must not be null");
+                throw new AliException("offerId , returnFields must not be null");
             }
         }
 
