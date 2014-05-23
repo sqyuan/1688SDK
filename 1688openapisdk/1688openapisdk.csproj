@@ -109,6 +109,7 @@
     <Compile Include="domain\logistics\TraceNode.cs" />
     <Compile Include="domain\product\SkuChild.cs" />
     <Compile Include="domain\product\SkuInfo.cs" />
+    <Compile Include="domain\userdefinecategory\SellerCatInfo.cs" />
     <Compile Include="example\AccessTokenExample.cs" />
     <Compile Include="example\Config.cs" />
     <Compile Include="DefaultAliClient.cs" />
@@ -137,6 +138,8 @@
     <Compile Include="orderpush\Sign.cs" />
     <Compile Include="request\AccessTokenRequest.cs" />
     <Compile Include="request\category\CategoryGetCatePathRequest.cs" />
+    <Compile Include="request\userdefinecategory\OfferGroupHasOpenedRequest.cs" />
+    <Compile Include="request\userdefinecategory\OfferGroupSetRequest.cs" />
     <Compile Include="request\category\ProductAttributesGetRequest.cs" />
     <Compile Include="request\category\SpubyattributeGetRequest.cs" />
     <Compile Include="request\customer\AcrmCustomerGroupGetRequest.cs" />
@@ -162,6 +165,11 @@
     <Compile Include="request\search\SearchPropertiesAbuseRequest.cs" />
     <Compile Include="request\search\SearchTitlePropertiesInconsistentRequest.cs" />
     <Compile Include="request\search\SearchTitleStuffingReqeust.cs" />
+    <Compile Include="request\userdefinecategory\CategoryGetSelfCatlistRequest.cs" />
+    <Compile Include="domain\userdefinecategory\UserDefineCat.cs" />
+    <Compile Include="request\userdefinecategory\UserCategoryGetOfferIdsRequest.cs" />
+    <Compile Include="request\userdefinecategory\UserCategoryOffersAddRequest.cs" />
+    <Compile Include="request\userdefinecategory\UserCategoryOffersRemoveRequest.cs" />
     <Compile Include="response\category\CategoryGetCatePathResponse.cs" />
     <Compile Include="request\category\CategoryGetCatListByParentIdRequest.cs" />
     <Compile Include="request\category\CategoryGetPostCatListRequest.cs" />
@@ -250,6 +258,12 @@
     <Compile Include="response\search\SearchPropertiesAbuseResponse.cs" />
     <Compile Include="response\search\SearchTitlePropertiesInconsistentResponse.cs" />
     <Compile Include="response\search\SearchTitleStuffingResponse.cs" />
+    <Compile Include="response\userdefinecategory\CategoryGetSelfCatlistResponse.cs" />
+    <Compile Include="response\userdefinecategory\OfferGroupHasOpenedResponse.cs" />
+    <Compile Include="response\userdefinecategory\OfferGroupSetResponse.cs" />
+    <Compile Include="response\userdefinecategory\UserCategoryGetOfferIdsResponse.cs" />
+    <Compile Include="response\userdefinecategory\UserCategoryOffersAddResponse.cs" />
+    <Compile Include="response\userdefinecategory\UserCategoryOffersRemoveResponse.cs" />
     <Compile Include="util\StringUtil.cs" />
     <Compile Include="util\WebUtils.cs" />
     <Compile Include="IAliClient.cs" />

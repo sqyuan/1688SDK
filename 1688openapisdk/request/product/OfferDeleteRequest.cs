@@ -4,7 +4,7 @@ using System.Text;
 using _1688openapisdk.response.product;
 using _1688openapisdk.domain.product;
 
-namespace _1688openapisdk.request.product
+namespace _1688openapisdk.domain.product
 {
     /// <summary>
     /// 通过本接口实现阿里巴巴中文站已登录卖家会员永久删除指定offerID产品信息的功能；offer永久删除的业务规则现有网站业务逻辑保持一致；

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using _1688openapisdk.response.logistics;
 
-namespace _1688openapisdk.request.logistics
+namespace _1688openapisdk.domain.logistics
 {
     /// <summary>
     /// 用户运费模板列表描述查询

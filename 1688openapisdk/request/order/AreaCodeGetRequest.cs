@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using _1688openapisdk.response.order;
 
-namespace _1688openapisdk.request.order
+namespace _1688openapisdk.domain.order
 {
     /// <summary>
     /// 获取省份编码信息

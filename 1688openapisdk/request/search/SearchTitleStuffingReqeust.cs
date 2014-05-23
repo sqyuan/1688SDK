@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using _1688openapisdk.response.search;
 
-namespace _1688openapisdk.request.search
+namespace _1688openapisdk.domain.search
 {
     /// <summary>
     /// 标题堆砌，用来检测offer标题中是否存在堆砌多个关键词的情况，包括产品词堆砌，型号词堆砌，品牌堆砌等

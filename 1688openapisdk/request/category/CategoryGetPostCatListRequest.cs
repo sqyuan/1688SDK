@@ -4,7 +4,7 @@ using System.Text;
 using _1688openapisdk.response.category;
 using _1688openapisdk.domain.category;
 
-namespace _1688openapisdk.request.category
+namespace _1688openapisdk.domain.category
 {
     /// <summary>
     /// 根据类目ID获取商品发布类目信息

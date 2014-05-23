@@ -4,7 +4,7 @@ using System.Text;
 using _1688openapisdk.response.customer;
 using _1688openapisdk.domain.customer;
 
-namespace _1688openapisdk.request.customer
+namespace _1688openapisdk.domain.customer
 {
     /// <summary>
     /// 查询某个memberId下面所有的分组标签

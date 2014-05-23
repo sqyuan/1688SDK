@@ -5,7 +5,7 @@ using _1688openapisdk.response.product;
 using _1688openapisdk.domain.product;
 using _1688openapisdk.domain;
 
-namespace _1688openapisdk.request.product
+namespace _1688openapisdk.domain.product
 {
     /// <summary>
     /// 增量修改offer（该接口只支持价格和标题的增量修改！请慎用！）

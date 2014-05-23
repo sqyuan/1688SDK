@@ -4,7 +4,7 @@ using System.Text;
 using _1688openapisdk.response.product;
 using _1688openapisdk.domain.product;
 
-namespace _1688openapisdk.request.product
+namespace _1688openapisdk.domain.product
 {
     /// <summary>
     /// 本接通过数据接口的形式，实现阿里巴巴中文站登录会员修改offer的功能。 注意：该接口是全量修改，不传的值会被清空。每条offer每天最多被改30次。

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using _1688openapisdk.response;
 
-namespace _1688openapisdk.request
+namespace _1688openapisdk.domain
 {
     /// <summary>
     /// 自己联系物流（线下物流）发货

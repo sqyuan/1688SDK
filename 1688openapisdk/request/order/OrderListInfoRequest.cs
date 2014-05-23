@@ -4,7 +4,7 @@ using System.Text;
 using _1688openapisdk.response.order;
 using _1688openapisdk.domain.order;
 
-namespace _1688openapisdk.request.order
+namespace _1688openapisdk.domain.order
 {
     ///trade.order.list.get  新版查询订单列表，不包含用户的隐私数据
     public class OrderListInfoRequest : IAliRequest<OrderListInfoResponse>

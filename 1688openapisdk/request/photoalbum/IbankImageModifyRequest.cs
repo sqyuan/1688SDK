@@ -4,7 +4,7 @@ using System.Text;
 using _1688openapisdk.response.photoalbum;
 using _1688openapisdk.domain.photoalbum;
 
-namespace _1688openapisdk.request.photoalbum
+namespace _1688openapisdk.domain.photoalbum
 {
     /// <summary>
     /// 本接口实现修改图片信息功能

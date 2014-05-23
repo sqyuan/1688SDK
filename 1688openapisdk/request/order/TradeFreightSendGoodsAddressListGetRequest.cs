@@ -4,7 +4,7 @@ using System.Text;
 using _1688openapisdk.response.order;
 using _1688openapisdk.domain.order;
 
-namespace _1688openapisdk.request.order
+namespace _1688openapisdk.domain.order
 {
     /// <summary>
     /// 本接口实现获取指定会员在阿里巴巴中文站上的发货地址列表信息

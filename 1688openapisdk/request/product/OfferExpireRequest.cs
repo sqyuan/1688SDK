@@ -4,7 +4,7 @@ using System.Text;
 using _1688openapisdk.response.product;
 using _1688openapisdk.domain.product;
 
-namespace _1688openapisdk.request.product
+namespace _1688openapisdk.domain.product
 {
     /// <summary>
     /// 通过本接口实现阿里巴巴中文站已登录卖家会员批量的设置指定offerID产品信息为过期商品的功能；转为过期的业务规则现有网站的业务逻辑保持一致；

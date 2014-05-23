@@ -4,7 +4,7 @@ using System.Text;
 using _1688openapisdk.response.member;
 using _1688openapisdk.domain.member;
 
-namespace _1688openapisdk.request.member
+namespace _1688openapisdk.domain.member
 {
     /// <summary>
     /// 获取阿里巴巴阿中国网站会员诚信信息。包括诚信通和诚信保障相关数据 creditInfo.get -- version: 1

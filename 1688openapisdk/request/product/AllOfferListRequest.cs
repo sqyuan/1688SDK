@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using _1688openapisdk.response;
 
-namespace _1688openapisdk.request
+namespace _1688openapisdk.domain
 {
     /// <summary>
     /// 获取当前会话会员的所有产品列表

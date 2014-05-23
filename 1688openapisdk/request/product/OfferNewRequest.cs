@@ -4,7 +4,7 @@ using System.Text;
 using _1688openapisdk.response.product;
 using _1688openapisdk.domain.product;
 
-namespace _1688openapisdk.request.product
+namespace _1688openapisdk.domain.product
 {
     /// <summary>
     /// 本接口通过数据接口的形式，实现阿里巴巴中文站登录会员发布offer的功能。每个客户每天最多新发布1000个产品。

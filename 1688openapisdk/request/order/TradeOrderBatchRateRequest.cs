@@ -4,7 +4,7 @@ using System.Text;
 using _1688openapisdk.response.order;
 using _1688openapisdk.domain.order;
 
-namespace _1688openapisdk.request.order
+namespace _1688openapisdk.domain.order
 {
     /// <summary>
     /// 批量提交订单评价 此接口支持多笔订单（暂定最多10笔每次）同时提交评价，并且只支持卖家向买家的评价，目前当某笔订单存在多个商品时,只能为这笔订单的这些商品提交相同的评价内容。

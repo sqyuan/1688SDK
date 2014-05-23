@@ -4,7 +4,7 @@ using System.Text;
 using _1688openapisdk.response.category;
 using _1688openapisdk.domain.category;
 
-namespace _1688openapisdk.request.category
+namespace _1688openapisdk.domain.category
 {
     /// <summary>
     /// 本接口实现通过数据接口的形式，通过输入用户填写的某个类目关键产品属性，返回该类目产品属性的SPU信息

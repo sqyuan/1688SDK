@@ -4,7 +4,7 @@ using System.Text;
 using _1688openapisdk.response.category;
 using _1688openapisdk.domain.category;
 
-namespace _1688openapisdk.request.category
+namespace _1688openapisdk.domain.category
 {
     /// <summary>
     /// 本接口实现通过数据接口的形式，通过大市场叶子类目id，获取该类目的发布类目路径

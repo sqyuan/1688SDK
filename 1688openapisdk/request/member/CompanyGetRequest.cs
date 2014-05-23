@@ -4,7 +4,7 @@ using System.Text;
 using _1688openapisdk.response.member;
 using _1688openapisdk.domain.member;
 
-namespace _1688openapisdk.request.member
+namespace _1688openapisdk.domain.member
 {
     /// <summary>
     /// 获取阿里巴巴中国网站会员的公司库信息

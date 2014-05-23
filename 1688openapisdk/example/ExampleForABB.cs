@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using _1688openapisdk.request;
+using _1688openapisdk.domain;
 using _1688openapisdk.response;
-using _1688openapisdk.request.member;
-using _1688openapisdk.request.product;
+using _1688openapisdk.domain.member;
+using _1688openapisdk.domain.product;
 using _1688openapisdk.response.product;
 using _1688openapisdk.domain.product;
-using _1688openapisdk.request.customer;
+using _1688openapisdk.domain.customer;
 using _1688openapisdk.response.customer;
 using _1688openapisdk.domain;
 

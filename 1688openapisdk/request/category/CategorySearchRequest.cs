@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using _1688openapisdk.response.category;
 
-namespace _1688openapisdk.request.category
+namespace _1688openapisdk.domain.category
 {
     /// <summary>
     /// 本接口实现通过输入关键词,搜索相关的类目ID

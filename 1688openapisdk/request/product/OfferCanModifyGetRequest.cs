@@ -4,7 +4,7 @@ using System.Text;
 using _1688openapisdk.response.product;
 using _1688openapisdk.domain.product;
 
-namespace _1688openapisdk.request.product
+namespace _1688openapisdk.domain.product
 {
     /// <summary>
     /// 通过本接口实现阿里巴巴中文站已登录会员获取指定产品是否可以修改的信息

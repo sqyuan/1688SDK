@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using _1688openapisdk.response.order;
 
-namespace _1688openapisdk.request.order
+namespace _1688openapisdk.domain.order
 {
      /// <summary>
     /// 查询单个订单详情，新版的查询详情接口，不含隐私数据

@@ -5,7 +5,7 @@ using _1688openapisdk.response;
 using _1688openapisdk.domain;
 
 
-namespace _1688openapisdk.request
+namespace _1688openapisdk.domain
 {
     /// <summary>
     /// 获取当前会话会员的已发布产品信息列表

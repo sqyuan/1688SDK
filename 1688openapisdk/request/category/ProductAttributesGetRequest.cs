@@ -4,7 +4,7 @@ using System.Text;
 using _1688openapisdk.response.category;
 using _1688openapisdk.domain.category;
 
-namespace _1688openapisdk.request.category
+namespace _1688openapisdk.domain.category
 {
     /// <summary>
     /// 本接口实现通过数据接口的形式，通过输入中文站大市场发布的叶子类目，返回其对应的产品属性信息（建议使用API“根据类目ID获取类目发布属性信息offerPostFeatures.get ”，获得所有发布相关属性信息）

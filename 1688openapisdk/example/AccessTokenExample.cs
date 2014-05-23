@@ -1,26 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using _1688openapisdk.request;
+using _1688openapisdk.domain;
 using _1688openapisdk.response;
-using _1688openapisdk.request.order;
+using _1688openapisdk.domain.order;
 using _1688openapisdk.response.order;
-using _1688openapisdk.request.photoalbum;
+using _1688openapisdk.domain.photoalbum;
 using _1688openapisdk.response.photoalbum;
-using _1688openapisdk.request.product;
+using _1688openapisdk.domain.product;
 using _1688openapisdk.response.product;
-using _1688openapisdk.request.category;
+using _1688openapisdk.domain.category;
 using _1688openapisdk.response.category;
-using _1688openapisdk.request.member;
+using _1688openapisdk.domain.member;
 using _1688openapisdk.response.member;
-using _1688openapisdk.request.customer;
+using _1688openapisdk.domain.customer;
 using _1688openapisdk.response.customer;
 using _1688openapisdk.domain.product;
 using _1688openapisdk.domain;
-using _1688openapisdk.request.logistics;
+using _1688openapisdk.domain.logistics;
 using _1688openapisdk.response.logistics;
-using _1688openapisdk.request.search;
+using _1688openapisdk.domain.search;
 using _1688openapisdk.response.search;
+using _1688openapisdk.domain.userdefinecategory;
+using _1688openapisdk.response.userdefinecategory;
+using _1688openapisdk.request.userdefinecategory;
 
 namespace _1688openapisdk.example
 {
@@ -92,10 +95,10 @@ namespace _1688openapisdk.example
             ///查询单个产品信息 offer.get -- version: 1
             OfferQueryRequest offerQueryRequest = new OfferQueryRequest();
             //offerQueryRequest.access_token = accessTokenResponse.accessToken;
-            offerQueryRequest.offerId = 35687805905;
-            offerQueryRequest.returnFields = new string[] { "skuArray", "offerId", "subject", "productFeatureList", "details", "memberId", "postCategryId", "saledCount", "amount", "amountOnSale", "priceRanges", "unit", "gmtModified", "imageList" };
+            offerQueryRequest.offerId = 37014312231;
+            //offerQueryRequest.returnFields = new string[] { "skuArray", "offerId", "subject", "productFeatureList", "details", "memberId", "postCategryId", "saledCount", "amount", "amountOnSale", "priceRanges", "unit", "gmtModified", "imageList" };
             OfferResponse offerResponse = defaultAliClient.Execute(offerQueryRequest);
-            Console.WriteLine(offerResponse.toReturn.ToString());
+            Console.WriteLine(offerResponse.toReturn);
 
             ///增量修改产品库存 offer.modify.stock -- version: 1
             OfferModifyStockRequest offerModifyStockRequest = new OfferModifyStockRequest();
@@ -226,8 +229,8 @@ namespace _1688openapisdk.example
             TradeFreightTemplateListGetRequest tradeFreightTemplateListGetRequest = new TradeFreightTemplateListGetRequest();
             tradeFreightTemplateListGetRequest.access_token = accessTokenResponse.accessToken;
             tradeFreightTemplateListGetRequest.memberId = "testfree";
-            TradeFreightTemplateListGetResponse tradeFreightTemplateListGetResponse = defaultAliClient.Execute(tradeFreightTemplateListGetRequest);
-            Console.WriteLine(tradeFreightTemplateListGetResponse);
+            ///TradeFreightTemplateListGetResponse tradeFreightTemplateListGetResponse = defaultAliClient.Execute(tradeFreightTemplateListGetRequest);
+            ///Console.WriteLine(tradeFreightTemplateListGetResponse);
 
             ///获取省份编码信息
             AreaCodeGetRequest areaCodeGetRequest = new AreaCodeGetRequest();
@@ -348,6 +351,59 @@ namespace _1688openapisdk.example
             searchTitleStuffingReqeust.query = "ABB 品牌 品牌ABB口罩 防护口罩";
             SearchTitleStuffingResponse SearchTitleStuffingResponse = defaultAliClient.Execute(searchTitleStuffingReqeust);
             Console.WriteLine(SearchTitleStuffingResponse.body);
+
+
+
+            ///阿里巴巴中国网站会员开启或关闭自定义分类功能
+            OfferGroupSetRequest offerGroupSetRequest = new OfferGroupSetRequest();
+            offerGroupSetRequest.access_token = accessTokenResponse.accessToken;
+            offerGroupSetRequest.switchType = "on";
+            OfferGroupSetResponse offerGroupSetResponse = defaultAliClient.Execute(offerGroupSetRequest);
+            Console.WriteLine(offerGroupSetResponse);
+
+            ///获取指定会员（供应商）的自定义商品分类信息
+            CategoryGetSelfCatlistRequest categoryGetSelfCatlistRequest = new CategoryGetSelfCatlistRequest();
+            categoryGetSelfCatlistRequest.memberId = "testfree";
+            CategoryGetSelfCatlistResponse CategoryGetSelfCatlistResponse = defaultAliClient.Execute(categoryGetSelfCatlistRequest);
+            Console.WriteLine(CategoryGetSelfCatlistResponse.body);
+
+            ///阿里巴巴中国网站会员开启或关闭自定义分类功能
+            OfferGroupSetRequest offerGroupSetRequest1 = new OfferGroupSetRequest();
+            offerGroupSetRequest1.access_token = accessTokenResponse.accessToken;
+            offerGroupSetRequest1.switchType = "off";
+            OfferGroupSetResponse offerGroupSetResponse1 = defaultAliClient.Execute(offerGroupSetRequest1);
+            Console.WriteLine(offerGroupSetResponse1);
+
+            ///获取阿里巴巴中国网站会员是否已经开启自定义分类功能
+            OfferGroupHasOpenedRequest offerGroupHasOpenedRequest = new OfferGroupHasOpenedRequest();
+            offerGroupHasOpenedRequest.memberId = "testfree";
+            OfferGroupHasOpenedResponse offerGroupHasOpenedResponse = defaultAliClient.Execute(offerGroupHasOpenedRequest);
+            Console.WriteLine(offerGroupHasOpenedResponse);
+
+            ///批量获取指定产品所属的自定义分类ID
+            UserCategoryGetOfferIdsRequest userCategoryGetOfferIdsRequest = new UserCategoryGetOfferIdsRequest();
+            userCategoryGetOfferIdsRequest.access_token = accessTokenResponse.accessToken;
+            userCategoryGetOfferIdsRequest.offerIds = "37115077409;37953104410";
+            UserCategoryGetOfferIdsResponse userCategoryGetOfferIdsResponse = defaultAliClient.Execute(userCategoryGetOfferIdsRequest);
+            Console.WriteLine(userCategoryGetOfferIdsResponse.toReturn);
+
+            ///批量添加多个产品到一个自定义分类下
+            UserCategoryOffersAddRequest userCategoryOffersAddRequest = new UserCategoryOffersAddRequest();
+            userCategoryOffersAddRequest.offerIds = "37115077409";
+            userCategoryOffersAddRequest.groupId = 35382752;
+            userCategoryOffersAddRequest.access_token = accessTokenResponse.accessToken;
+            UserCategoryOffersAddResponse userCategoryOffersAddResponse = defaultAliClient.Execute(userCategoryOffersAddRequest);
+            Console.WriteLine(userCategoryOffersAddResponse);
+
+            ///本接口实现通过数据接口的形式，批量移除多个产品的一个自定义分类
+            UserCategoryOffersRemoveRequest userCategoryOffersRemoveRequest = new UserCategoryOffersRemoveRequest();
+            userCategoryOffersRemoveRequest.offerIds = "37115077409";
+            userCategoryOffersRemoveRequest.groupId = 35382752;
+            userCategoryOffersRemoveRequest.access_token = accessTokenResponse.accessToken;
+            UserCategoryOffersRemoveResponse userCategoryOffersRemoveResponse = defaultAliClient.Execute(userCategoryOffersRemoveRequest);
+            Console.WriteLine(userCategoryOffersRemoveResponse);
+
         }
+
     }
 }
