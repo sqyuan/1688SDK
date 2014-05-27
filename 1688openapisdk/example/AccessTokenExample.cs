@@ -15,8 +15,6 @@ using _1688openapisdk.domain.member;
 using _1688openapisdk.response.member;
 using _1688openapisdk.domain.customer;
 using _1688openapisdk.response.customer;
-using _1688openapisdk.domain.product;
-using _1688openapisdk.domain;
 using _1688openapisdk.domain.logistics;
 using _1688openapisdk.response.logistics;
 using _1688openapisdk.domain.search;
@@ -24,6 +22,7 @@ using _1688openapisdk.response.search;
 using _1688openapisdk.domain.userdefinecategory;
 using _1688openapisdk.response.userdefinecategory;
 using _1688openapisdk.request.userdefinecategory;
+using _1688openapisdk.request.order;
 
 namespace _1688openapisdk.example
 {
@@ -323,6 +322,13 @@ namespace _1688openapisdk.example
             newTradeOrderDetailGetRequest.id = 440136255012834;
             NewTradeOrderDetailGetResponse newtradeOrderDetailGetResponse = defaultAliClient.Execute(newTradeOrderDetailGetRequest);
             Console.WriteLine(newtradeOrderDetailGetResponse);
+
+            ///新版查询订单列表，不包含用户的隐私数据；适用于查询卖家和买家的订单列表
+            NewTradeOrderListGetRequest newTradeOrderListGetRequest = new NewTradeOrderListGetRequest();
+            newTradeOrderListGetRequest.access_token = accessTokenResponse.accessToken;
+            newTradeOrderListGetRequest.buyerMemberId = "testfree";
+            NewTradeOrderListGetResponse newTradeOrderListGetResponse = defaultAliClient.Execute(newTradeOrderListGetRequest);
+            Console.WriteLine(newTradeOrderListGetResponse);
 
             ///用户在发布offer时候，需要选择对应的发布类目，类目作弊就是用来检测选择的类目跟发布的offer信息是否匹配
             SearchCategoryCheatingRequest searchCategoryCheatingRequest = new SearchCategoryCheatingRequest();

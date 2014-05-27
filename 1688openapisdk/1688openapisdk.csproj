@@ -81,6 +81,7 @@
     <Compile Include="domain\order\OrderEntry.cs" />
     <Compile Include="domain\order\OrderInfo.cs" />
     <Compile Include="domain\order\OrderInvoiceModel.cs" />
+    <Compile Include="domain\order\OrderListResult.cs" />
     <Compile Include="domain\order\OrderMemoModel.cs" />
     <Compile Include="domain\order\TradeRateParam.cs" />
     <Compile Include="domain\order\WeightTariff.cs" />
@@ -138,6 +139,7 @@
     <Compile Include="orderpush\Sign.cs" />
     <Compile Include="request\AccessTokenRequest.cs" />
     <Compile Include="request\category\CategoryGetCatePathRequest.cs" />
+    <Compile Include="request\order\NewTradeOrderListGetRequest.cs" />
     <Compile Include="request\userdefinecategory\OfferGroupHasOpenedRequest.cs" />
     <Compile Include="request\userdefinecategory\OfferGroupSetRequest.cs" />
     <Compile Include="request\category\ProductAttributesGetRequest.cs" />
@@ -224,6 +226,7 @@
     <Compile Include="response\member\CreditInfoGetResponse.cs" />
     <Compile Include="response\member\MemberInfoResponse.cs" />
     <Compile Include="response\order\AreaCodeGetResponse.cs" />
+    <Compile Include="response\order\NewTradeOrderListGetResponse.cs" />
     <Compile Include="response\order\OrderListInfoResponse.cs" />
     <Compile Include="response\order\TradeFreightSendGoodsAddressListGetResponse.cs" />
     <Compile Include="response\order\TradeFreightTemplateListGetResponse.cs" />
