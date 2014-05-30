@@ -23,6 +23,8 @@ using _1688openapisdk.domain.userdefinecategory;
 using _1688openapisdk.response.userdefinecategory;
 using _1688openapisdk.request.userdefinecategory;
 using _1688openapisdk.request.order;
+using _1688openapisdk.request.app;
+using _1688openapisdk.response.app;
 
 namespace _1688openapisdk.example
 {
@@ -408,6 +410,16 @@ namespace _1688openapisdk.example
             userCategoryOffersRemoveRequest.access_token = accessTokenResponse.accessToken;
             UserCategoryOffersRemoveResponse userCategoryOffersRemoveResponse = defaultAliClient.Execute(userCategoryOffersRemoveRequest);
             Console.WriteLine(userCategoryOffersRemoveResponse);
+
+            ///
+            ///ISV获取自己名下的应用最近一个月的订购的订单信息列表。
+            ///
+            AppOrderGetRequest appOrderGetRequest = new AppOrderGetRequest();
+            appOrderGetRequest.appKey = "1002071";
+            appOrderGetRequest.gmtCreate = DateTime.Now.AddDays(-500);
+            AppOrderGetResponse appOrderGetResponse = defaultAliClient.Execute(appOrderGetRequest);
+            appOrderGetResponse = appOrderGetResponse.format();
+            Console.WriteLine(appOrderGetResponse);
 
         }
 

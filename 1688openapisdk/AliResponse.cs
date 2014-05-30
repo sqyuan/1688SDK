@@ -46,6 +46,7 @@ namespace _1688openapisdk
                 return !string.IsNullOrEmpty(this.error_code);
             }
         }
+
     }
 
 }

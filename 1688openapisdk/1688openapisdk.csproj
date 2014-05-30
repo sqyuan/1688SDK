@@ -56,6 +56,7 @@
     <Compile Include="AliDictionary.cs" />
     <Compile Include="AliException.cs" />
     <Compile Include="AliResponse.cs" />
+    <Compile Include="domain\app\IsvOrderItemDto.cs" />
     <Compile Include="domain\category\FeatureIdValue.cs" />
     <Compile Include="domain\category\OfferCatsInfo.cs" />
     <Compile Include="domain\category\ParentCatInfo.cs" />
@@ -138,6 +139,7 @@
     <Compile Include="orderpush\PushServiceController.cs" />
     <Compile Include="orderpush\Sign.cs" />
     <Compile Include="request\AccessTokenRequest.cs" />
+    <Compile Include="request\app\AppOrderGetRequest.cs" />
     <Compile Include="request\category\CategoryGetCatePathRequest.cs" />
     <Compile Include="request\order\NewTradeOrderListGetRequest.cs" />
     <Compile Include="request\userdefinecategory\OfferGroupHasOpenedRequest.cs" />
@@ -172,6 +174,7 @@
     <Compile Include="request\userdefinecategory\UserCategoryGetOfferIdsRequest.cs" />
     <Compile Include="request\userdefinecategory\UserCategoryOffersAddRequest.cs" />
     <Compile Include="request\userdefinecategory\UserCategoryOffersRemoveRequest.cs" />
+    <Compile Include="response\app\AppOrderGetResponse.cs" />
     <Compile Include="response\category\CategoryGetCatePathResponse.cs" />
     <Compile Include="request\category\CategoryGetCatListByParentIdRequest.cs" />
     <Compile Include="request\category\CategoryGetPostCatListRequest.cs" />
